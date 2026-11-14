@@ -1,0 +1,30 @@
+/* RetroLib V2 : palette sombre et neutre (maquette "RetroLib V2"), un seul accent
+   clair pour les actions principales. Les composants lisent ces variables plutôt que
+   des couleurs en dur. */
+:root {
+  --bg: #0b0b0c;
+  --surface-1: #131315;
+  --surface-2: #17171a;
+  --surface-3: #1c1c20;
+  --surface-4: #222226;
+  --border: #1e1e22;
+  --border-soft: #1a1a1d;
+  --border-strong: #2a2a2f;
+  --border-hover: #3a3a40;
+  --text: #ededef;
+  --text-strong: #ffffff;
+  --text-2: #b4b4ba;
+  --text-3: #8b8b92;
+  --text-4: #6e6e76;
+  --accent: #ededef;
+  --accent-text: #0b0b0c;
+  --live: #4ade80;
+  --warning: #f5b971;
+  --danger: #ff8a8a;
+  --focus: #8ab4ff;
+  --radius-sm: 5px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --font: 'Inter Variable', Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+}

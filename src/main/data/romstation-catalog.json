@@ -1,0 +1,2316 @@
+{
+  "1012": {
+    "developer": "CyberConnect2",
+    "platform": "ps1",
+    "publisher": "Atlus",
+    "title": "Tail Concerto",
+    "year": 1999
+  },
+  "1015": {
+    "developer": "Core Design",
+    "platform": "ps1",
+    "publisher": "Eidos Interactive",
+    "title": "Tomb Raider : La Révélation finale",
+    "year": 1999
+  },
+  "1016": {
+    "developer": "Core Design",
+    "platform": "ps1",
+    "publisher": "Eidos Interactive",
+    "title": "Tomb Raider : Sur les traces de Lara Croft",
+    "year": 2000
+  },
+  "1036": {
+    "developer": "Sacnoth",
+    "platform": "ps1",
+    "publisher": "Infogrames",
+    "title": "Koudelka",
+    "year": 2000
+  },
+  "1039": {
+    "developer": "Argonaut",
+    "platform": "ps1",
+    "publisher": "Electronic Arts",
+    "title": "Harry Potter et la Chambre des secrets",
+    "year": 2002
+  },
+  "170": {
+    "developer": "Square Enix",
+    "platform": "gba",
+    "publisher": "Nintendo",
+    "title": "Final Fantasy Tactics Advance",
+    "year": 2003
+  },
+  "171": {
+    "developer": "Intelligent Systems",
+    "platform": "gba",
+    "publisher": "Nintendo",
+    "title": "Fire Emblem",
+    "year": 2004
+  },
+  "19188": {
+    "developer": "Namco",
+    "platform": "ps1",
+    "publisher": "Sony",
+    "title": "Klonoa : Door to Phantomile",
+    "year": 1998
+  },
+  "225": {
+    "developer": "Nintendo",
+    "platform": "gba",
+    "publisher": "Nintendo",
+    "title": "Pokémon Version Vert Feuille",
+    "year": 2004
+  },
+  "29153": {
+    "developer": "Capcom",
+    "platform": "gamecube",
+    "publisher": "Capcom",
+    "title": "Resident Evil 2",
+    "year": 2003
+  },
+  "29187": {
+    "developer": "Namco",
+    "platform": "ps1",
+    "publisher": "Namco",
+    "title": "Tales of Destiny",
+    "year": 1997
+  },
+  "29189": {
+    "developer": "Namco",
+    "platform": "gamecube",
+    "publisher": "Namco",
+    "title": "Tales of Symphonia",
+    "year": 2004
+  },
+  "29241": {
+    "developer": "Rareware",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "Star Fox Adventures",
+    "year": 2002
+  },
+  "29254": {
+    "developer": "Genius Sonority",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "Pokémon XD : Le Souffle des Ténèbres",
+    "year": 2005
+  },
+  "29259": {
+    "developer": "Retro Studio",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "Metroid Prime 2: Echoes",
+    "year": 2004
+  },
+  "29283": {
+    "developer": "Capcom",
+    "platform": "gamecube",
+    "publisher": "Capcom",
+    "title": "Resident Evil 4",
+    "year": 2005
+  },
+  "29354": {
+    "developer": "Ubisoft Paris",
+    "platform": "gamecube",
+    "publisher": "Ubisoft",
+    "title": "Rayman 3: Hoodlum Havoc",
+    "year": 2003
+  },
+  "29593": {
+    "developer": "Factor 5",
+    "platform": "gamecube",
+    "publisher": "LucasArts",
+    "title": "Star Wars: Rogue Squadron II - Rogue Leader",
+    "year": 2002
+  },
+  "29647": {
+    "developer": "SCE Japan Studio",
+    "platform": "ps1",
+    "publisher": "Sony Computer Entertainment Europe",
+    "title": "Ape Escape",
+    "year": 1999
+  },
+  "29648": {
+    "developer": "Capcom",
+    "platform": "gamecube",
+    "publisher": "Capcom",
+    "title": "Viewtiful Joe",
+    "year": 2003
+  },
+  "29702": {
+    "developer": "EA Sport BIG",
+    "platform": "gamecube",
+    "publisher": "Electronic Arts",
+    "title": "SSX on Tour",
+    "year": 2005
+  },
+  "29704": {
+    "developer": "Capcom",
+    "platform": "gamecube",
+    "publisher": "Capcom",
+    "title": "Resident Evil 3: Nemesis",
+    "year": 2003
+  },
+  "29743": {
+    "developer": "Nintendo",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "Pikmin",
+    "year": 2002
+  },
+  "29744": {
+    "developer": "Nintendo",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "Pikmin 2",
+    "year": 2004
+  },
+  "29746": {
+    "developer": "EA Sports",
+    "platform": "gamecube",
+    "publisher": "Electronic Arts",
+    "title": "SSX 3",
+    "year": 2003
+  },
+  "29762": {
+    "developer": "Sony Computer",
+    "platform": "ps1",
+    "publisher": "Disney Interactive",
+    "title": "Mickey's Wild Adventure",
+    "year": 1998
+  },
+  "29800": {
+    "developer": "n-Space",
+    "platform": "ps1",
+    "publisher": "Take 2 Interactive",
+    "title": "Duke Nukem: Land of the Babes",
+    "year": 2001
+  },
+  "29811": {
+    "developer": "Kronos Digital Entertainment",
+    "platform": "ps1",
+    "publisher": "Eidos Interactive",
+    "title": "Fear Effect 2 : Retro Helix",
+    "year": 2001
+  },
+  "29812": {
+    "developer": "Monolith Soft | tri-Crescendo",
+    "platform": "gamecube",
+    "publisher": "Namco",
+    "title": "Baten Kaitos : Les Ailes éternelles et l'Océan perdu",
+    "year": 2005
+  },
+  "29825": {
+    "developer": "Camelot Software",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "Mario Golf: Toadstool Tour",
+    "year": 2004
+  },
+  "29869": {
+    "developer": "Nintendo",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "The Legend of Zelda: Ocarina of Time / Master Quest",
+    "year": 2003
+  },
+  "29918": {
+    "developer": "Warthog",
+    "platform": "gamecube",
+    "publisher": "Electronic Arts",
+    "title": "Harry Potter à l'école des sorciers",
+    "year": 2003
+  },
+  "29953": {
+    "developer": "Square Enix",
+    "platform": "gamecube",
+    "publisher": "Square Enix",
+    "title": "Final Fantasy Crystal Chronicles",
+    "year": 2004
+  },
+  "30001": {
+    "developer": "Nintendo",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "Pokémon Colosseum",
+    "year": 2004
+  },
+  "30008": {
+    "developer": "Squaresoft",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Final Fantasy X",
+    "year": 2002
+  },
+  "30010": {
+    "developer": "Level-5",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Dark Chronicle",
+    "year": 2003
+  },
+  "30021": {
+    "developer": "SCE Santa Monica",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "God of War",
+    "year": 2005
+  },
+  "30022": {
+    "developer": "Sony",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "ICO",
+    "year": 2002
+  },
+  "30035": {
+    "developer": "Level-5",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Rogue Galaxy",
+    "year": 2007
+  },
+  "30038": {
+    "developer": "Square Enix",
+    "platform": "ps2",
+    "publisher": "Square Enix",
+    "title": "Final Fantasy XII",
+    "year": 2007
+  },
+  "30044": {
+    "developer": "Volition",
+    "platform": "ps2",
+    "publisher": "THQ",
+    "title": "Summoner 2",
+    "year": 2002
+  },
+  "30046": {
+    "developer": "Level-5",
+    "platform": "ps2",
+    "publisher": "Square Enix",
+    "title": "Dragon Quest : L'Odyssée du Roi Maudit",
+    "year": 2006
+  },
+  "30050": {
+    "developer": "Square Enix",
+    "platform": "ps2",
+    "publisher": "Square Enix",
+    "title": "Dirge of Cerberus: Final Fantasy VII",
+    "year": 2006
+  },
+  "30061": {
+    "developer": "Square Enix",
+    "platform": "ps2",
+    "publisher": "Square Enix",
+    "title": "Final Fantasy X-2",
+    "year": 2004
+  },
+  "33930": {
+    "developer": "Softmax",
+    "platform": "ps2",
+    "publisher": "Codemasters",
+    "title": "Magna Carta",
+    "year": 2006
+  },
+  "33933": {
+    "developer": "Electronic Arts",
+    "platform": "ps2",
+    "publisher": "Electronic Arts",
+    "title": "Le Seigneur des Anneaux : Le Tiers-Âge",
+    "year": 2004
+  },
+  "33935": {
+    "developer": "Clover Studios",
+    "platform": "ps2",
+    "publisher": "Capcom",
+    "title": "Okami",
+    "year": 2007
+  },
+  "33937": {
+    "developer": "High Impact Games",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Ratchet & Clank : La taille, ça compte",
+    "year": 2008
+  },
+  "33941": {
+    "developer": "Level-5",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Dark Cloud",
+    "year": 2001
+  },
+  "33947": {
+    "developer": "Naughty Dog",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Jak and Daxter: The Precursor Legacy",
+    "year": 2001
+  },
+  "33953": {
+    "developer": "Sony",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Shadow of the Colossus",
+    "year": 2006
+  },
+  "33959": {
+    "developer": "Eurocom",
+    "platform": "gamecube",
+    "publisher": "Electronic Arts",
+    "title": "007: Nightfire",
+    "year": 2002
+  },
+  "33981": {
+    "developer": "Electronic Arts",
+    "platform": "ps2",
+    "publisher": "Electronic Arts",
+    "title": "Harry Potter et la Coupe de feu",
+    "year": 2005
+  },
+  "33982": {
+    "developer": "Rockstar North",
+    "platform": "ps2",
+    "publisher": "Rockstar Games",
+    "title": "Grand Theft Auto: Vice City",
+    "year": 2002
+  },
+  "33983": {
+    "developer": "Electronic Arts",
+    "platform": "ps2",
+    "publisher": "Electronic Arts",
+    "title": "Le Seigneur des Anneaux : Le Retour du Roi",
+    "year": 2003
+  },
+  "33987": {
+    "developer": "Stormfront Studios",
+    "platform": "ps2",
+    "publisher": "Electronic Arts",
+    "title": "Le Seigneur des Anneaux : Les Deux Tours",
+    "year": 2002
+  },
+  "34002": {
+    "developer": "Rockstar Vancouver",
+    "platform": "ps2",
+    "publisher": "Rockstar Games",
+    "title": "Canis Canem Edit",
+    "year": 2006
+  },
+  "34017": {
+    "developer": "Naughty Dog",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Jak 3",
+    "year": 2004
+  },
+  "34045": {
+    "developer": "HAL Laboratory",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "Kirby Air Ride",
+    "year": 2004
+  },
+  "34071": {
+    "developer": "Nippon Ichi Software",
+    "platform": "ps2",
+    "publisher": "Koei",
+    "title": "La Pucelle : Tactics",
+    "year": 2004
+  },
+  "34074": {
+    "developer": "Insomniac Games",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Ratchet : Gladiator",
+    "year": 2005
+  },
+  "34080": {
+    "developer": "Zoom",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Mr Moskeeto",
+    "year": 2002
+  },
+  "34106": {
+    "developer": "Snowblind Studios",
+    "platform": "ps2",
+    "publisher": "Black Isle Studios",
+    "title": "Baldur's Gate: Dark Alliance",
+    "year": 2001
+  },
+  "34107": {
+    "developer": "Konami",
+    "platform": "ps2",
+    "publisher": "Konami",
+    "title": "Castlevania: Lament of Innocence",
+    "year": 2004
+  },
+  "34112": {
+    "developer": "Ubisoft Montpellier",
+    "platform": "ps2",
+    "publisher": "Ubisoft",
+    "title": "Beyond Good & Evil",
+    "year": 2003
+  },
+  "34113": {
+    "developer": "Black Isle Studios",
+    "platform": "ps2",
+    "publisher": "Hasbro",
+    "title": "Baldur's Gate : Dark Alliance II",
+    "year": 2004
+  },
+  "34118": {
+    "developer": "Insomniac Games",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Ratchet & Clank 3",
+    "year": 2004
+  },
+  "34142": {
+    "developer": "Monte Cristo Multimédia",
+    "platform": "ps2",
+    "publisher": "Atari",
+    "title": "7 Sins",
+    "year": 2005
+  },
+  "34155": {
+    "developer": "Monolith Software",
+    "platform": "ps2",
+    "publisher": "Sony Computer Entertainment Europe",
+    "title": "Xenosaga Episode II: Jenseits von Gut und Böse",
+    "year": 2005
+  },
+  "34159": {
+    "developer": "Vanillaware",
+    "platform": "ps2",
+    "publisher": "Square Enix",
+    "title": "Odin Sphere",
+    "year": 2008
+  },
+  "34178": {
+    "developer": "Capcom",
+    "platform": "ps2",
+    "publisher": "Capcom",
+    "title": "Devil May Cry",
+    "year": 2001
+  },
+  "34231": {
+    "developer": "Psygnosis",
+    "platform": "ps1",
+    "publisher": "Sony Computer Entertainment Europe",
+    "title": "Kingsley's Adventure",
+    "year": 1999
+  },
+  "34265": {
+    "developer": "Radical Entertainment",
+    "platform": "ps2",
+    "publisher": "Vivendi Universal",
+    "title": "The Simpsons : Hit & Run",
+    "year": 2003
+  },
+  "34283": {
+    "developer": "Midway Studios San Diego",
+    "platform": "ps2",
+    "publisher": "Midway",
+    "title": "Gauntlet: Seven Sorrows",
+    "year": 2006
+  },
+  "34292": {
+    "developer": "Sacnoth",
+    "platform": "ps2",
+    "publisher": "Ubisoft",
+    "title": "Shadow Hearts",
+    "year": 2002
+  },
+  "34307": {
+    "developer": "Sonic Team",
+    "platform": "gamecube",
+    "publisher": "Sega",
+    "title": "Sonic Adventure 2 Battle",
+    "year": 2002
+  },
+  "34311": {
+    "developer": "Free Radical Design",
+    "platform": "ps2",
+    "publisher": "Eidos Interactive",
+    "title": "TimeSplitters 2",
+    "year": 2002
+  },
+  "34322": {
+    "developer": "EA Sports BIG",
+    "platform": "ps2",
+    "publisher": "Electronic Arts",
+    "title": "SSX 3",
+    "year": 2003
+  },
+  "34324": {
+    "developer": "Climax",
+    "platform": "ps2",
+    "publisher": "Konami",
+    "title": "Silent Hill Origins",
+    "year": 2008
+  },
+  "34338": {
+    "developer": "OverWorks",
+    "platform": "gamecube",
+    "publisher": "Sega",
+    "title": "Skies of Arcadia Legends",
+    "year": 2003
+  },
+  "34339": {
+    "developer": "Nintendo",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "The Legend of Zelda: Four Swords Adventures",
+    "year": 2005
+  },
+  "34345": {
+    "developer": "Tri-Ace",
+    "platform": "ps2",
+    "publisher": "Square Enix",
+    "title": "Valkyrie Profile 2 : Silmeria",
+    "year": 2007
+  },
+  "34348": {
+    "developer": "Capcom",
+    "platform": "ps2",
+    "publisher": "Capcom",
+    "title": "Breath of Fire: Dragon Quarter",
+    "year": 2003
+  },
+  "34366": {
+    "developer": "Konami",
+    "platform": "ps2",
+    "publisher": "Konami",
+    "title": "Yu-Gi-Oh! The Duelists of the Roses",
+    "year": 2004
+  },
+  "34379": {
+    "developer": "Nintendo",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "Animal Crossing",
+    "year": 2004
+  },
+  "34380": {
+    "developer": "Sucker Punch",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Sly Racoon",
+    "year": 2003
+  },
+  "34382": {
+    "developer": "505 Games",
+    "platform": "ps2",
+    "publisher": "Sony Computer Entertainment Europe",
+    "title": "Rule of Rose",
+    "year": 2006
+  },
+  "34437": {
+    "developer": "Insomniac Games",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Ratchet & Clank 2",
+    "year": 2003
+  },
+  "34457": {
+    "developer": "Namco",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Klonoa 2 : Lunatea's Veil",
+    "year": 2001
+  },
+  "34458": {
+    "developer": "Tecmo",
+    "platform": "ps2",
+    "publisher": "Wanadoo",
+    "title": "Rygar: The Legendary Adventure",
+    "year": 2003
+  },
+  "34460": {
+    "developer": "Capcom",
+    "platform": "ps2",
+    "publisher": "Capcom",
+    "title": "Shadow of Rome",
+    "year": 2005
+  },
+  "34512": {
+    "developer": "Sucker Punch",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Sly 2 : Association de Voleurs",
+    "year": 2004
+  },
+  "34545": {
+    "developer": "Sierra",
+    "platform": "ps2",
+    "publisher": "Vivendi Universal",
+    "title": "Leisure Suit Larry: Magna Cum Laude",
+    "year": 2004
+  },
+  "34550": {
+    "developer": "EA Bright Light",
+    "platform": "ps2",
+    "publisher": "Electronic Arts",
+    "title": "Harry Potter et le Prince de sang-mêlé",
+    "year": 2009
+  },
+  "34557": {
+    "developer": "Free Radical Design",
+    "platform": "ps2",
+    "publisher": "Electronic Arts",
+    "title": "TimeSplitters: Future Perfect",
+    "year": 2005
+  },
+  "34571": {
+    "developer": "Argonaut",
+    "platform": "ps1",
+    "publisher": "Fox Interactive",
+    "title": "Croc 2",
+    "year": 1999
+  },
+  "34586": {
+    "developer": "Acquire",
+    "platform": "ps1",
+    "publisher": "Activision",
+    "title": "Tenchu 2: Birth of the Stealth Assassins",
+    "year": 2000
+  },
+  "34622": {
+    "developer": "Konami",
+    "platform": "ps1",
+    "publisher": "Konami",
+    "title": "Castlevania Chronicles",
+    "year": 2001
+  },
+  "34634": {
+    "developer": "Capcom",
+    "platform": "ps1",
+    "publisher": "Capcom",
+    "title": "Breath of Fire IV",
+    "year": 2000
+  },
+  "34641": {
+    "developer": "Capcom",
+    "platform": "ps2",
+    "publisher": "Capcom",
+    "title": "Maximo",
+    "year": 2002
+  },
+  "34669": {
+    "developer": "Quest",
+    "platform": "ps1",
+    "publisher": "Artdink",
+    "title": "Tactics Ogre",
+    "year": 1998
+  },
+  "34676": {
+    "developer": "Konami",
+    "platform": "ps2",
+    "publisher": "Konami",
+    "title": "Silent Hill 3",
+    "year": 2003
+  },
+  "34730": {
+    "developer": "Eden Games",
+    "platform": "ps2",
+    "publisher": "Atari",
+    "title": "Kya : Dark Lineage",
+    "year": 2003
+  },
+  "34751": {
+    "developer": "Capcom",
+    "platform": "ps2",
+    "publisher": "Capcom",
+    "title": "Devil May Cry 2",
+    "year": 2003
+  },
+  "34752": {
+    "developer": "Rockstar North",
+    "platform": "ps2",
+    "publisher": "Take2 Interactive",
+    "title": "Manhunt",
+    "year": 2002
+  },
+  "34778": {
+    "developer": "SCE Japan Studio",
+    "platform": "ps2",
+    "publisher": "Sony Computer Entertainment Europe",
+    "title": "Ape Escape 2",
+    "year": 2003
+  },
+  "34784": {
+    "developer": "Capcom",
+    "platform": "ps1",
+    "publisher": "Capcom",
+    "title": "Strider",
+    "year": 2000
+  },
+  "34793": {
+    "developer": "Krome Studios",
+    "platform": "ps2",
+    "publisher": "Sierra",
+    "title": "The Legend of Spyro 08 : The Eternal Night",
+    "year": 2007
+  },
+  "34797": {
+    "developer": "Crystal Dynamics",
+    "platform": "ps2",
+    "publisher": "Eidos Interactive",
+    "title": "Legacy of Kain 3 : Soul Reaver 2",
+    "year": 2001
+  },
+  "34801": {
+    "developer": "Crystal Dynamics",
+    "platform": "ps2",
+    "publisher": "Eidos Interactive",
+    "title": "Legacy of Kain 5 : Defiance",
+    "year": 2004
+  },
+  "34830": {
+    "developer": "Warthog",
+    "platform": "ps2",
+    "publisher": "Electronic Arts",
+    "title": "Harry Potter à l'école des sorciers",
+    "year": 2003
+  },
+  "34836": {
+    "developer": "Capcom",
+    "platform": "ps1",
+    "publisher": "Capcom",
+    "title": "Strider 2",
+    "year": 2000
+  },
+  "34842": {
+    "developer": "Gust",
+    "platform": "ps2",
+    "publisher": "Koei",
+    "title": "Atelier Iris 2: The Azoth of Destiny",
+    "year": 2006
+  },
+  "34846": {
+    "developer": "Neverland",
+    "platform": "ps2",
+    "publisher": "Sega",
+    "title": "Shining Force EXA",
+    "year": 2007
+  },
+  "34848": {
+    "developer": "Konami",
+    "platform": "ps2",
+    "publisher": "Konami",
+    "title": "Metal Gear Solid 3 : Subsistence",
+    "year": 2006
+  },
+  "34882": {
+    "developer": "Camelot Software Planning",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "Mario Power Tennis",
+    "year": 2005
+  },
+  "34894": {
+    "developer": "Sonic Team",
+    "platform": "gamecube",
+    "publisher": "Sega",
+    "title": "Shadow the Hedgehog",
+    "year": 2005
+  },
+  "34895": {
+    "developer": "Konami",
+    "platform": "ps2",
+    "publisher": "Konami",
+    "title": "Silent Hill 4 : The Room",
+    "year": 2004
+  },
+  "34946": {
+    "developer": "Gust",
+    "platform": "ps2",
+    "publisher": "Koei",
+    "title": "Atelier Iris 3: Grand Phantasm",
+    "year": 2007
+  },
+  "34952": {
+    "developer": "Konami",
+    "platform": "ps2",
+    "publisher": "Konami",
+    "title": "Metal Gear Solid 2 Substance",
+    "year": 2003
+  },
+  "34969": {
+    "developer": "Climax",
+    "platform": "ps2",
+    "publisher": "Konami",
+    "title": "Silent Hill : Shattered Memories",
+    "year": 2010
+  },
+  "34981": {
+    "developer": "Media Vision",
+    "platform": "ps2",
+    "publisher": "505 Games",
+    "title": "Wild Arms 4",
+    "year": 2006
+  },
+  "34982": {
+    "developer": "Radical Entertainment",
+    "platform": "gamecube",
+    "publisher": "Vivendi Universal",
+    "title": "The Simpsons: Hit & Run",
+    "year": 2003
+  },
+  "35022": {
+    "developer": "Remedy",
+    "platform": "ps2",
+    "publisher": "Rockstar Games",
+    "title": "Max Payne",
+    "year": 2002
+  },
+  "35105": {
+    "developer": "Nautilus",
+    "platform": "ps2",
+    "publisher": "Midway",
+    "title": "Shadow Hearts: Covenant",
+    "year": 2005
+  },
+  "35137": {
+    "developer": "Eurocom Developments",
+    "platform": "gamecube",
+    "publisher": "Electronic Arts",
+    "title": "Harry Potter et la Chambre des secrets",
+    "year": 2002
+  },
+  "35138": {
+    "developer": "Sega",
+    "platform": "gamecube",
+    "publisher": "Sega",
+    "title": "Sonic Adventure DX: Director's Cut",
+    "year": 2003
+  },
+  "35221": {
+    "developer": "Dream Factory",
+    "platform": "ps2",
+    "publisher": "Squaresoft",
+    "title": "The Bouncer",
+    "year": 2001
+  },
+  "35266": {
+    "developer": "Terminal Reality",
+    "platform": "ps2",
+    "publisher": "Majesco",
+    "title": "BloodRayne",
+    "year": 2003
+  },
+  "35267": {
+    "developer": "Insomniac Games",
+    "platform": "ps1",
+    "publisher": "Sony",
+    "title": "Spyro 3 : Year of the Dragon",
+    "year": 2000
+  },
+  "35298": {
+    "developer": "Sucker Punch",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Sly 3 : Honour Among Thieves",
+    "year": 2005
+  },
+  "35299": {
+    "developer": "Free Radical Design",
+    "platform": "ps2",
+    "publisher": "Codemasters",
+    "title": "Second Sight",
+    "year": 2004
+  },
+  "35314": {
+    "developer": "Snowblind Studios",
+    "platform": "ps2",
+    "publisher": "Ubisoft",
+    "title": "Champions of Norrath",
+    "year": 2004
+  },
+  "35347": {
+    "developer": "Sega",
+    "platform": "ps2",
+    "publisher": "Sega",
+    "title": "Shining Tears",
+    "year": 2004
+  },
+  "35405": {
+    "developer": "Bungie",
+    "platform": "ps2",
+    "publisher": "Rockstar Games",
+    "title": "Oni",
+    "year": 2001
+  },
+  "35678": {
+    "developer": "Irem",
+    "platform": "ps2",
+    "publisher": "Atlus",
+    "title": "Steambot Chronicles",
+    "year": 2007
+  },
+  "35679": {
+    "developer": "Project Siren",
+    "platform": "ps2",
+    "publisher": "Sony Computer Entertainment Europe",
+    "title": "Forbidden Siren 2",
+    "year": 2006
+  },
+  "35715": {
+    "developer": "Media Vision",
+    "platform": "ps2",
+    "publisher": "Sony Computer Entertainment America",
+    "title": "Wild Arms 3",
+    "year": 2003
+  },
+  "35815": {
+    "developer": "Gust Co. Ltd",
+    "platform": "ps2",
+    "publisher": "NIS America",
+    "title": "Ar Tonelico II: Melody Of Metafalica",
+    "year": 2009
+  },
+  "35852": {
+    "developer": "SCE Japan Studio",
+    "platform": "ps2",
+    "publisher": "Sony Computer Entertainment Europe",
+    "title": "Ape Escape 3",
+    "year": 2006
+  },
+  "35858": {
+    "developer": "Snowblind Studios",
+    "platform": "ps2",
+    "publisher": "Ubisoft",
+    "title": "Champions : Return to Arms",
+    "year": 2005
+  },
+  "35866": {
+    "developer": "Gust Co. Ltd",
+    "platform": "ps2",
+    "publisher": "505 Games",
+    "title": "Ar Tonelico: Melody of Elemia",
+    "year": 2007
+  },
+  "35898": {
+    "developer": "Capcom",
+    "platform": "ps2",
+    "publisher": "Capcom",
+    "title": "Maximo vs Army of Zin",
+    "year": 2004
+  },
+  "35977": {
+    "developer": "Surreal Software",
+    "platform": "ps2",
+    "publisher": "Vivendi Universal",
+    "title": "Le Seigneur des Anneaux : La Communauté de l'Anneau",
+    "year": 2002
+  },
+  "36004": {
+    "developer": "Inevitable Entertainment",
+    "platform": "ps2",
+    "publisher": "Sierra",
+    "title": "The Hobbit",
+    "year": 2003
+  },
+  "36012": {
+    "developer": "High Moon Studios",
+    "platform": "ps2",
+    "publisher": "Ubisoft",
+    "title": "Darkwatch: Curse of the West",
+    "year": 2005
+  },
+  "36073": {
+    "developer": "Konami",
+    "platform": "ps2",
+    "publisher": "Konami",
+    "title": "Silent Hill 2 : Director's Cut",
+    "year": 2003
+  },
+  "36194": {
+    "developer": "Surreal Software",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Drakan : The Ancients' Gates",
+    "year": 2002
+  },
+  "36296": {
+    "developer": "Capcom",
+    "platform": "ps2",
+    "publisher": "Capcom",
+    "title": "Devil May Cry 3 : Dante's Awakening Special Edition",
+    "year": 2006
+  },
+  "36298": {
+    "developer": "EA Black Box",
+    "platform": "gamecube",
+    "publisher": "Electronic Arts",
+    "title": "Need for Speed: Most Wanted",
+    "year": 2005
+  },
+  "36447": {
+    "developer": "T&E Soft",
+    "platform": "ps1",
+    "publisher": "T&E Soft",
+    "title": "Legend of Foresia : La Contrée interdite",
+    "year": 1999
+  },
+  "37183": {
+    "developer": "From Software",
+    "platform": "ps1",
+    "publisher": "From Software",
+    "title": "King's Field",
+    "year": 1996
+  },
+  "37247": {
+    "developer": "Squaresoft",
+    "platform": "ps1",
+    "publisher": "Sony",
+    "title": "Chocobo Racing",
+    "year": 1999
+  },
+  "37351": {
+    "developer": "Quest Corporation",
+    "platform": "ps1",
+    "publisher": "Atlus Software Inc.",
+    "title": "Ogre Battle: The March of the Black Queen",
+    "year": 1997
+  },
+  "37397": {
+    "developer": "In Utero",
+    "platform": "ps2",
+    "publisher": "Ubisoft",
+    "title": "Evil Twin: Cyprien's Chronicles",
+    "year": 2001
+  },
+  "37411": {
+    "developer": "Capcom",
+    "platform": "ps2",
+    "publisher": "Capcom",
+    "title": "Gregory Horror Show",
+    "year": 2003
+  },
+  "37427": {
+    "developer": "Rockstar London",
+    "platform": "ps2",
+    "publisher": "Rockstar Games",
+    "title": "Manhunt 2",
+    "year": 2008
+  },
+  "37445": {
+    "developer": "Surreal Software",
+    "platform": "ps2",
+    "publisher": "Midway",
+    "title": "The Suffering",
+    "year": 2004
+  },
+  "37447": {
+    "developer": "Surreal Software",
+    "platform": "ps2",
+    "publisher": "Midway",
+    "title": "The Suffering : Les liens qui nous unissent",
+    "year": 2005
+  },
+  "37849": {
+    "developer": "Capcom",
+    "platform": "ps2",
+    "publisher": "Capcom",
+    "title": "Haunting Ground",
+    "year": 2005
+  },
+  "37941": {
+    "developer": "Grasshopper Manufacture",
+    "platform": "ps2",
+    "publisher": "505 Games",
+    "title": "Michigan: Report from Hell",
+    "year": 2005
+  },
+  "38179": {
+    "developer": "Krome Studios",
+    "platform": "ps2",
+    "publisher": "Vivendi Universal Games",
+    "title": "The Legend of Spyro 07 : A New Beginning",
+    "year": 2006
+  },
+  "38303": {
+    "developer": "Treyarch",
+    "platform": "dreamcast",
+    "publisher": "Virgin Interactive",
+    "title": "Dragons Blood",
+    "year": 2000
+  },
+  "38511": {
+    "developer": "Konami",
+    "platform": "ps2",
+    "publisher": "Konami",
+    "title": "Yu-Gi-Oh! Capsule Monster Coliseum",
+    "year": 2005
+  },
+  "38877": {
+    "developer": "Remedy",
+    "platform": "ps2",
+    "publisher": "Rockstar Games",
+    "title": "Max Payne 2 : The Fall of Max Payne",
+    "year": 2003
+  },
+  "39077": {
+    "developer": "Midway",
+    "platform": "ps2",
+    "publisher": "Midway",
+    "title": "Gauntlet: Dark Legacy",
+    "year": 2001
+  },
+  "39087": {
+    "developer": "Naughty Dog",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Jak II : Hors la Loi",
+    "year": 2003
+  },
+  "39149": {
+    "developer": "Dream Factory",
+    "platform": "ps2",
+    "publisher": "Capcom",
+    "title": "Crimson Tears",
+    "year": 2004
+  },
+  "39169": {
+    "developer": "Insomniac Games",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Ratchet & Clank",
+    "year": 2002
+  },
+  "39225": {
+    "developer": "Matrix Software",
+    "platform": "ps2",
+    "publisher": "Atlus",
+    "title": "Dual Hearts",
+    "year": 2002
+  },
+  "39389": {
+    "developer": "From Software",
+    "platform": "ps2",
+    "publisher": "Agetec",
+    "title": "Forever Kingdom",
+    "year": 2001
+  },
+  "40043": {
+    "developer": "Sonic Team",
+    "platform": "gamecube",
+    "publisher": "Sega",
+    "title": "Sonic Heroes",
+    "year": 2004
+  },
+  "409": {
+    "developer": "Rareware",
+    "platform": "n64",
+    "publisher": "Nintendo",
+    "title": "Banjo-Kazooie",
+    "year": 1998
+  },
+  "42259": {
+    "developer": "Project Siren",
+    "platform": "ps2",
+    "publisher": "Sony Computer Entertainment Europe",
+    "title": "Forbidden Siren",
+    "year": 2004
+  },
+  "42287": {
+    "developer": "Goshow",
+    "platform": "ps2",
+    "publisher": "Koei",
+    "title": "Colosseum: Road to Freedom",
+    "year": 2005
+  },
+  "42515": {
+    "developer": "Electronic Arts",
+    "platform": "ps2",
+    "publisher": "Electronic Arts",
+    "title": "Harry Potter : Coupe du monde de Quidditch",
+    "year": 2003
+  },
+  "42601": {
+    "developer": "Etranges Libellules",
+    "platform": "ps2",
+    "publisher": "Sierra",
+    "title": "The Legend of Spyro 09 : Naissance d'un Dragon",
+    "year": 2008
+  },
+  "42798": {
+    "developer": "Electronic Arts",
+    "platform": "ps2",
+    "publisher": "Eurocom",
+    "title": "Harry Potter et la Chambre des secrets",
+    "year": 2002
+  },
+  "43002": {
+    "developer": "Idea Factory",
+    "platform": "ps2",
+    "publisher": "O3 Entertainment",
+    "title": "Chaos Wars",
+    "year": 2008
+  },
+  "43337": {
+    "developer": "Eidos Interactive",
+    "platform": "ps1",
+    "publisher": "Eidos Interactive",
+    "title": "Deathtrap Dungeon",
+    "year": 1998
+  },
+  "43834": {
+    "developer": "Human Entertainment",
+    "platform": "ps1",
+    "publisher": "Human Entertainment",
+    "title": "Clock Tower: The First Fear",
+    "year": 1995
+  },
+  "44429": {
+    "developer": "Squaresoft",
+    "platform": "ps1",
+    "publisher": "Squaresoft",
+    "title": "Threads of Fate",
+    "year": 2000
+  },
+  "44513": {
+    "developer": "Square Enix",
+    "platform": "psp",
+    "publisher": "Ubisoft",
+    "title": "Final Fantasy",
+    "year": 2008
+  },
+  "44523": {
+    "developer": "Square Enix",
+    "platform": "psp",
+    "publisher": "Ubisoft",
+    "title": "Final Fantasy II",
+    "year": 2008
+  },
+  "44538": {
+    "developer": "Tate Interactive",
+    "platform": "psp",
+    "publisher": "Atari",
+    "title": "Lanfeust de Troy",
+    "year": 2008
+  },
+  "44549": {
+    "developer": "Square Enix",
+    "platform": "psp",
+    "publisher": "Square Enix",
+    "title": "Final Fantasy IV: The Complete Collection",
+    "year": 2011
+  },
+  "44561": {
+    "developer": "Amaze Entertainment",
+    "platform": "psp",
+    "publisher": "Electronic Arts",
+    "title": "Le Seigneur des Anneaux : Tactics",
+    "year": 2005
+  },
+  "44599": {
+    "developer": "Artificial Mind and Movement",
+    "platform": "psp",
+    "publisher": "Electronic Arts",
+    "title": "Dante's Inferno",
+    "year": 2010
+  },
+  "44858": {
+    "developer": "Clover Studio",
+    "platform": "ps2",
+    "publisher": "Capcom",
+    "title": "God Hand",
+    "year": 2007
+  },
+  "44863": {
+    "developer": "Square Enix",
+    "platform": "psp",
+    "publisher": "Square Enix",
+    "title": "Tactics Ogre: Let Us Cling Together",
+    "year": 2011
+  },
+  "46916": {
+    "developer": "Altron",
+    "platform": "ps1",
+    "publisher": "Mud Duck Productions",
+    "title": "Cleopatra Fortune",
+    "year": 2003
+  },
+  "47902": {
+    "developer": "VU Games",
+    "platform": "ps1",
+    "publisher": "Electronic Arts",
+    "title": "Xena: Warrior Princess",
+    "year": 1999
+  },
+  "47932": {
+    "developer": "Tamsoft",
+    "platform": "ps2",
+    "publisher": "505 Game Street",
+    "title": "Zombie Zone",
+    "year": 2005
+  },
+  "48759": {
+    "developer": "A2M",
+    "platform": "ps2",
+    "publisher": "Buena Vista Games",
+    "title": "Kim Possible : Quelle est la Mission ?",
+    "year": 2006
+  },
+  "48821": {
+    "developer": "Ubisoft",
+    "platform": "ps2",
+    "publisher": "Ubisoft",
+    "title": "Hype: The Time Quest",
+    "year": 2001
+  },
+  "50433": {
+    "developer": "Midway",
+    "platform": "ps1",
+    "publisher": "Midway",
+    "title": "Gauntlet Legends",
+    "year": 2000
+  },
+  "50552": {
+    "developer": "Gust",
+    "platform": "ps2",
+    "publisher": "Koei",
+    "title": "Atelier Iris: Eternal Mana",
+    "year": 2006
+  },
+  "51903": {
+    "developer": "Acclaim Studios Austin",
+    "platform": "ps2",
+    "publisher": "Acclaim",
+    "title": "Vexx",
+    "year": 2003
+  },
+  "5205": {
+    "developer": "Nintendo",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "Luigi's Mansion",
+    "year": 2002
+  },
+  "5208": {
+    "developer": "Capcom",
+    "platform": "gamecube",
+    "publisher": "Capcom",
+    "title": "Resident Evil",
+    "year": 2002
+  },
+  "5209": {
+    "developer": "Nintendo",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "Mario Kart : Double Dash!!",
+    "year": 2003
+  },
+  "5210": {
+    "developer": "Nintendo",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "The Legend of Zelda: The Wind Waker",
+    "year": 2003
+  },
+  "5212": {
+    "developer": "Retro Studios",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "Metroid Prime",
+    "year": 2003
+  },
+  "5213": {
+    "developer": "Silicon Knights",
+    "platform": "gamecube",
+    "publisher": "Konami",
+    "title": "Metal Gear Solid: The Twin Snakes",
+    "year": 2004
+  },
+  "5216": {
+    "developer": "Nintendo",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "Super Mario Sunshine",
+    "year": 2002
+  },
+  "5218": {
+    "developer": "Intelligent Systems",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "Fire Emblem: Path of Radiance",
+    "year": 2005
+  },
+  "5219": {
+    "developer": "Next Level Games",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "Mario Smash Football",
+    "year": 2005
+  },
+  "5222": {
+    "developer": "Intelligent Systems",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "Paper Mario : La Porte Millénaire",
+    "year": 2004
+  },
+  "5224": {
+    "developer": "Nintendo",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "The Legend of Zelda: Twilight Princess",
+    "year": 2006
+  },
+  "5226": {
+    "developer": "Namco",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "StarFox Assault",
+    "year": 2005
+  },
+  "5229": {
+    "developer": "Treasure",
+    "platform": "gamecube",
+    "publisher": "Nintendo",
+    "title": "Wario World",
+    "year": 2003
+  },
+  "523": {
+    "developer": "Squaresoft",
+    "platform": "snes",
+    "publisher": "Squaresoft",
+    "title": "Final Fantasy VI (Final Trad)",
+    "year": 1994
+  },
+  "52803": {
+    "developer": "EA Bright Light",
+    "platform": "ps2",
+    "publisher": "Electronic Arts",
+    "title": "Harry Potter et l'Ordre du Phénix",
+    "year": 2007
+  },
+  "53019": {
+    "developer": "Artoon",
+    "platform": "ps2",
+    "publisher": "Rising Star Games",
+    "title": "Swords of Destiny",
+    "year": 2006
+  },
+  "53134": {
+    "developer": "IO Interactive",
+    "platform": "gamecube",
+    "publisher": "Electronic Arts",
+    "title": "Freedom Fighters",
+    "year": 2003
+  },
+  "53160": {
+    "developer": "Rareware",
+    "platform": "n64",
+    "publisher": "THQ",
+    "title": "Conker's Bad Fur Day",
+    "year": 2001
+  },
+  "53349": {
+    "developer": "Yuke's",
+    "platform": "ps2",
+    "publisher": "Sammy Studios",
+    "title": "Berserk: Millennium Falcon Hen Seima Senki no Shou ",
+    "year": 2004
+  },
+  "539": {
+    "developer": "Square Enix",
+    "platform": "gba",
+    "publisher": "Nintendo",
+    "title": "Final Fantasy I & II: Dawn of Souls",
+    "year": 2004
+  },
+  "53927": {
+    "developer": "Gust Co. Ltd",
+    "platform": "ps2",
+    "publisher": "NIS America",
+    "title": "Ar Tonelico II: Melody Of Metafalica (Undub + 480p)",
+    "year": 2009
+  },
+  "54215": {
+    "developer": "Sonic Team",
+    "platform": "gamecube",
+    "publisher": "Sega",
+    "title": "Phantasy Star Online: Episode I & II Plus",
+    "year": 2004
+  },
+  "54430": {
+    "developer": "Crystal Dynamics",
+    "platform": "ps2",
+    "publisher": "Eidos Interactive",
+    "title": "Legacy of Kain 4 : Blood Omen 2",
+    "year": 2002
+  },
+  "54432": {
+    "developer": "SCE Studios San Diego",
+    "platform": "ps2",
+    "publisher": "Sony Computer Entertainment Europe",
+    "title": "The Mark of Kri",
+    "year": 2003
+  },
+  "55411": {
+    "developer": "EA Black Box",
+    "platform": "gamecube",
+    "publisher": "Electronic Arts",
+    "title": "Need for Speed: Underground 2",
+    "year": 2004
+  },
+  "55612": {
+    "developer": "Crystal Dynamics",
+    "platform": "ps2",
+    "publisher": "Eidos Interactive",
+    "title": "Whiplash",
+    "year": 2003
+  },
+  "55796": {
+    "developer": "SCE Santa Monica",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "God of War II",
+    "year": 2007
+  },
+  "610": {
+    "developer": "Core Design",
+    "platform": "ps1",
+    "publisher": "Eidos Interactive",
+    "title": "Tomb Raider",
+    "year": 1996
+  },
+  "611": {
+    "developer": "Insomniac Games",
+    "platform": "ps1",
+    "publisher": "Sony",
+    "title": "Spyro 1 the Dragon",
+    "year": 1998
+  },
+  "619": {
+    "developer": "Konami",
+    "platform": "ps1",
+    "publisher": "Konami",
+    "title": "Metal Gear Solid",
+    "year": 1999
+  },
+  "620": {
+    "developer": "Squaresoft",
+    "platform": "ps1",
+    "publisher": "Sony",
+    "title": "Final Fantasy VII",
+    "year": 1997
+  },
+  "629": {
+    "developer": "Squaresoft",
+    "platform": "ps1",
+    "publisher": "Sony",
+    "title": "Final Fantasy VIII",
+    "year": 1999
+  },
+  "631": {
+    "developer": "Squaresoft",
+    "platform": "ps1",
+    "publisher": "Sony",
+    "title": "Final Fantasy IX",
+    "year": 2001
+  },
+  "632": {
+    "developer": "Capcom",
+    "platform": "ps1",
+    "publisher": "Capcom",
+    "title": "Dino Crisis",
+    "year": 1999
+  },
+  "633": {
+    "developer": "Squaresoft",
+    "platform": "ps1",
+    "publisher": "Squaresoft",
+    "title": "Parasite Eve",
+    "year": 1998
+  },
+  "640": {
+    "developer": "Amazing Studios",
+    "platform": "ps1",
+    "publisher": "Infogrames",
+    "title": "Heart of Darkness",
+    "year": 1998
+  },
+  "652": {
+    "developer": "Matrix Software",
+    "platform": "ps1",
+    "publisher": "Psygnosis",
+    "title": "Alundra",
+    "year": 1998
+  },
+  "654": {
+    "developer": "SCE Studio Cambridge",
+    "platform": "ps1",
+    "publisher": "Sony",
+    "title": "MediEvil",
+    "year": 1998
+  },
+  "655": {
+    "developer": "Capcom",
+    "platform": "ps1",
+    "publisher": "Capcom",
+    "title": "Dino Crisis 2",
+    "year": 2000
+  },
+  "65929": {
+    "developer": "Squaresoft",
+    "platform": "ps1",
+    "publisher": "Squaresoft",
+    "title": "Xenogears",
+    "year": 1998
+  },
+  "65957": {
+    "developer": "Acquire",
+    "platform": "ps2",
+    "publisher": "505 GamesStreet",
+    "title": "Samurai Western",
+    "year": 2005
+  },
+  "66048": {
+    "developer": "Computer Artworks",
+    "platform": "ps2",
+    "publisher": "Black Label Games",
+    "title": "The Thing",
+    "year": 2002
+  },
+  "664": {
+    "developer": "Squaresoft",
+    "platform": "ps1",
+    "publisher": "Squaresoft",
+    "title": "Chrono Cross",
+    "year": 2000
+  },
+  "66733": {
+    "developer": "Electronic Arts",
+    "platform": "ps2",
+    "publisher": "Electronic Arts",
+    "title": "Harry Potter et le Prisonnier d'Azkaban",
+    "year": 2004
+  },
+  "668": {
+    "developer": "SCE Japan Studio",
+    "platform": "ps1",
+    "publisher": "Sony",
+    "title": "The Legend of Dragoon",
+    "year": 2001
+  },
+  "669": {
+    "developer": "989 Studios",
+    "platform": "ps1",
+    "publisher": "Sony",
+    "title": "Syphon Filter",
+    "year": 1999
+  },
+  "66951": {
+    "developer": "SCE Studio Cambridge",
+    "platform": "ps2",
+    "publisher": "Sony Computer Entertainment America",
+    "title": "Primal",
+    "year": 2003
+  },
+  "67148": {
+    "developer": "Nautilus",
+    "platform": "ps2",
+    "publisher": "Xseed Games",
+    "title": "Shadow Hearts: From the New World (Undub)",
+    "year": 2006
+  },
+  "673": {
+    "developer": "SCE Studio Cambridge",
+    "platform": "ps1",
+    "publisher": "Sony",
+    "title": "MediEvil 2",
+    "year": 2000
+  },
+  "67345": {
+    "developer": "Monolith Software",
+    "platform": "ps2",
+    "publisher": "Namco",
+    "title": "Xenosaga Episode I: Der Wille zur Macht",
+    "year": 2003
+  },
+  "67404": {
+    "developer": "Hydravision",
+    "platform": "ps2",
+    "publisher": "Microïds",
+    "title": "Obscure",
+    "year": 2004
+  },
+  "67407": {
+    "developer": "Hydravision",
+    "platform": "ps2",
+    "publisher": "Ignition Entertainment",
+    "title": "Obscure: The Aftermath",
+    "year": 2008
+  },
+  "67437": {
+    "developer": "Grasshopper Manufacture",
+    "platform": "ps2",
+    "publisher": "Capcom",
+    "title": "Killer7",
+    "year": 2005
+  },
+  "675": {
+    "developer": "Intelligent Systems",
+    "platform": "gba",
+    "publisher": "Nintendo",
+    "title": "Fire Emblem: The Sacred Stones",
+    "year": 2005
+  },
+  "67615": {
+    "developer": "Clover Studio",
+    "platform": "gamecube",
+    "publisher": "Capcom",
+    "title": "Viewtiful Joe 2",
+    "year": 2004
+  },
+  "67647": {
+    "developer": "3DO",
+    "platform": "ps2",
+    "publisher": "3DO",
+    "title": "Shifters",
+    "year": 2002
+  },
+  "67748": {
+    "developer": "High Impact Games",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Secret Agent Clank",
+    "year": 2009
+  },
+  "67904": {
+    "developer": "High Impact Games",
+    "platform": "ps2",
+    "publisher": "Sony",
+    "title": "Jak and Daxter: The Lost Frontier",
+    "year": 2009
+  },
+  "680": {
+    "developer": "Insomniac Games",
+    "platform": "ps1",
+    "publisher": "Sony",
+    "title": "Spyro 2 : Gateway to Glimmer",
+    "year": 1999
+  },
+  "682": {
+    "developer": "Konami",
+    "platform": "ps1",
+    "publisher": "Konami",
+    "title": "Yu-Gi-Oh! Forbidden Memories",
+    "year": 2002
+  },
+  "684": {
+    "developer": "Squaresoft",
+    "platform": "ps1",
+    "publisher": "Squaresoft",
+    "title": "Parasite Eve II",
+    "year": 2000
+  },
+  "68533": {
+    "developer": "Ubisoft Annecy",
+    "platform": "ps2",
+    "publisher": "Ubisoft",
+    "title": "Rayman 2: Revolution",
+    "year": 2001
+  },
+  "68544": {
+    "developer": "Argonaut Games PLC",
+    "platform": "ps2",
+    "publisher": "Evolved Games",
+    "title": "Malice",
+    "year": 2004
+  },
+  "687": {
+    "developer": "Game Arts",
+    "platform": "ps1",
+    "publisher": "Ubisoft",
+    "title": "Grandia",
+    "year": 2000
+  },
+  "688": {
+    "developer": "Capcom",
+    "platform": "ps1",
+    "publisher": "Infogrames",
+    "title": "Breath of Fire III",
+    "year": 1998
+  },
+  "689": {
+    "developer": "Tri-Ace",
+    "platform": "ps1",
+    "publisher": "Enix",
+    "title": "Valkyrie Profile",
+    "year": 2000
+  },
+  "68929": {
+    "developer": "Neverland",
+    "platform": "ps2",
+    "publisher": "Sega",
+    "title": "Shining Force Neo",
+    "year": 2005
+  },
+  "691": {
+    "developer": "KCET",
+    "platform": "ps1",
+    "publisher": "Konami",
+    "title": "Silent Hill",
+    "year": 1999
+  },
+  "692": {
+    "developer": "KCET",
+    "platform": "ps1",
+    "publisher": "Konami",
+    "title": "Suikoden",
+    "year": 1997
+  },
+  "693": {
+    "developer": "Squaresoft",
+    "platform": "ps1",
+    "publisher": "Squaresoft",
+    "title": "Vagrant Story",
+    "year": 2000
+  },
+  "697": {
+    "developer": "Acquire",
+    "platform": "ps1",
+    "publisher": "Activision",
+    "title": "Tenchu: Stealth Assassins",
+    "year": 1998
+  },
+  "69723": {
+    "developer": "Electronic Arts",
+    "platform": "gamecube",
+    "publisher": "Electronic Arts",
+    "title": "Need for Speed: Underground",
+    "year": 2003
+  },
+  "70017": {
+    "developer": "Human Entertainment",
+    "platform": "ps1",
+    "publisher": "Human Entertainment",
+    "title": "Mizzurna Falls",
+    "year": 1998
+  },
+  "70170": {
+    "developer": "Capcom",
+    "platform": "psp",
+    "publisher": "Capcom",
+    "title": "Darkstalkers Chronicles: The Tower of Chaos",
+    "year": 2005
+  },
+  "704": {
+    "developer": "KCET",
+    "platform": "ps1",
+    "publisher": "Konami",
+    "title": "Suikoden II",
+    "year": 2000
+  },
+  "70592": {
+    "developer": "Banpresto",
+    "platform": "psp",
+    "publisher": "Bandai Namco Games",
+    "title": "Queen's Blade: Spiral Chaos",
+    "year": 2009
+  },
+  "708": {
+    "developer": "Core Design",
+    "platform": "ps1",
+    "publisher": "Eidos Interactive",
+    "title": "Tomb Raider II",
+    "year": 1997
+  },
+  "710": {
+    "developer": "Kronos",
+    "platform": "ps1",
+    "publisher": "Eidos Interactive",
+    "title": "Fear Effect",
+    "year": 2000
+  },
+  "711": {
+    "developer": "Silicon Knights",
+    "platform": "ps1",
+    "publisher": "Crystal Dynamics",
+    "title": "Legacy of Kain 1 : Blood Omen",
+    "year": 1997
+  },
+  "712": {
+    "developer": "Media Vision",
+    "platform": "ps1",
+    "publisher": "Sony Computer Entertainment Europe",
+    "title": "Wild Arms",
+    "year": 1999
+  },
+  "715": {
+    "developer": "989 Studios",
+    "platform": "ps1",
+    "publisher": "Sony",
+    "title": "Syphon Filter 2",
+    "year": 2000
+  },
+  "71841": {
+    "developer": "From Software",
+    "platform": "ps2",
+    "publisher": "Agetec",
+    "title": "Echo Night Beyond",
+    "year": 2005
+  },
+  "719": {
+    "developer": "Contrail",
+    "platform": "ps1",
+    "publisher": "Sony Computer Entertainment America",
+    "title": "Wild Arms 2",
+    "year": 2000
+  },
+  "72049": {
+    "developer": "Monolith Software",
+    "platform": "ps2",
+    "publisher": "Namco Bandai Games",
+    "title": "Xenosaga Episode III: Also sprach Zarathustra",
+    "year": 2006
+  },
+  "72083": {
+    "developer": "Equinoxe Entertainment",
+    "platform": "ps2",
+    "publisher": "Universal Studios",
+    "title": "Spyro: Enter the Dragonfly",
+    "year": 2002
+  },
+  "72543": {
+    "developer": "Paradox Development",
+    "platform": "ps1",
+    "publisher": "Virgin Interactive",
+    "title": "Thrill Kill",
+    "year": 1998
+  },
+  "72727": {
+    "developer": "Eclipse Team",
+    "platform": "gamecube",
+    "title": "Super Mario Eclipse",
+    "year": 2021
+  },
+  "72931": {
+    "developer": "Konami",
+    "platform": "ps1",
+    "publisher": "Konami",
+    "title": "Castlevania : Symphony of the Night",
+    "year": 1997
+  },
+  "72962": {
+    "developer": "Intelligent Systems",
+    "platform": "wii",
+    "publisher": "Nintendo",
+    "title": "Fire Emblem: Radiant Dawn",
+    "year": 2008
+  },
+  "73043": {
+    "developer": "Media Vision",
+    "platform": "ps2",
+    "publisher": "Xseed Games",
+    "title": "Wild Arms 5",
+    "year": 2007
+  },
+  "731": {
+    "developer": "Argonaut",
+    "platform": "ps1",
+    "publisher": "Fox Interactive",
+    "title": "Croc: Legend of the Gobbos",
+    "year": 1997
+  },
+  "73267": {
+    "developer": "Nintendo",
+    "platform": "wii",
+    "publisher": "Nintendo",
+    "title": "The Legend of Zelda: Skyward Sword",
+    "year": 2011
+  },
+  "750": {
+    "developer": "Crystal Dynamics",
+    "platform": "ps1",
+    "publisher": "Eidos Interactive",
+    "title": "Legacy of Kain 2 : Soul Reaver",
+    "year": 1999
+  },
+  "76083": {
+    "developer": "Ortew",
+    "platform": "ps1",
+    "title": "Darkstalkers 3: Uncensored",
+    "year": 2021
+  },
+  "764": {
+    "developer": "Contrail",
+    "platform": "ps1",
+    "publisher": "Sony",
+    "title": "Legend of Legaia",
+    "year": 2000
+  },
+  "76428": {
+    "developer": "Mistwalker",
+    "platform": "wii",
+    "publisher": "Xseed Games",
+    "title": "The Last Story (Undub)",
+    "year": 2012
+  },
+  "76453": {
+    "developer": "Konami",
+    "platform": "ps2",
+    "publisher": "Konami",
+    "title": "Castlevania: Curse of Darkness (Undub)",
+    "year": 2005
+  },
+  "768": {
+    "developer": "Core Design",
+    "platform": "ps1",
+    "publisher": "Eidos Interactive",
+    "title": "Tomb Raider III",
+    "year": 1998
+  },
+  "77507": {
+    "developer": "Game Freak",
+    "platform": "nds",
+    "publisher": "Nintendo",
+    "title": "Pokémon Version Platine",
+    "year": 2009
+  },
+  "77544": {
+    "developer": "Level 5",
+    "platform": "nds",
+    "publisher": "Nintendo",
+    "title": "Dragon Quest IX : Les Sentinelles du firmament",
+    "year": 2010
+  },
+  "77622": {
+    "developer": "h.a.n.d",
+    "platform": "nds",
+    "publisher": "Square Enix",
+    "title": "Kingdom Hearts 358/2 Days",
+    "year": 2009
+  },
+  "77680": {
+    "developer": "Matrix Software",
+    "platform": "nds",
+    "publisher": "Rising Star Games",
+    "title": "Avalon Code",
+    "year": 2010
+  },
+  "77769": {
+    "developer": "Matrix Software",
+    "platform": "nds",
+    "publisher": "Square Enix",
+    "title": "Final Fantasy III",
+    "year": 2007
+  },
+  "77770": {
+    "developer": "Matrix Software",
+    "platform": "nds",
+    "publisher": "Square Enix",
+    "title": "Final Fantasy IV",
+    "year": 2008
+  },
+  "77771": {
+    "developer": "Intelligent Systems",
+    "platform": "nds",
+    "publisher": "Nintendo",
+    "title": "Fire Emblem: Shadow Dragon",
+    "year": 2008
+  },
+  "77815": {
+    "developer": "Matrix Software",
+    "platform": "nds",
+    "publisher": "Ignition Entertainment",
+    "title": "Nostalgia",
+    "year": 2009
+  },
+  "77845": {
+    "developer": "Matrix Software",
+    "platform": "nds",
+    "publisher": "Square Enix",
+    "title": "Final Fantasy: The 4 Heroes of Light",
+    "year": 2010
+  },
+  "77852": {
+    "developer": "Square Enix",
+    "platform": "nds",
+    "publisher": "Square Enix",
+    "title": "Final Fantasy Tactics A2: Grimoire of the Rift",
+    "year": 2008
+  },
+  "77855": {
+    "developer": "Think and Feel",
+    "platform": "nds",
+    "publisher": "Square Enix",
+    "title": "Final Fantasy XII: Revenant Wings",
+    "year": 2008
+  },
+  "77866": {
+    "developer": "Square Enix",
+    "platform": "nds",
+    "publisher": "Square Enix",
+    "title": "Final Fantasy Crystal Chronicles: Ring of Fates",
+    "year": 2008
+  },
+  "77870": {
+    "developer": "Square Enix",
+    "platform": "nds",
+    "publisher": "Square Enix",
+    "title": "Final Fantasy Crystal Chronicles: Echoes of Time",
+    "year": 2009
+  },
+  "77873": {
+    "developer": "H.A.N.D.",
+    "platform": "nds",
+    "publisher": "Square Enix",
+    "title": "Final Fantasy Fables: Chocobo Tales",
+    "year": 2007
+  },
+  "77960": {
+    "developer": "ArtePiazza",
+    "platform": "nds",
+    "publisher": "Nintendo",
+    "title": "Dragon Quest VI : Le Royaume des songes",
+    "year": 2011
+  },
+  "77963": {
+    "developer": "TOSE",
+    "platform": "nds",
+    "publisher": "Square Enix",
+    "title": "Dragon Quest Monsters: Joker",
+    "year": 2008
+  },
+  "77966": {
+    "developer": "TOSE",
+    "platform": "nds",
+    "publisher": "Nintendo",
+    "title": "Dragon Quest Monsters: Joker 2",
+    "year": 2011
+  },
+  "78448": {
+    "developer": "Capcom",
+    "platform": "nds",
+    "publisher": "Capcom",
+    "title": "Rosario to Vampire: Tanabata no Miss Youkai Gakuen",
+    "year": 2008
+  },
+  "78666": {
+    "developer": "KCEK",
+    "platform": "ps2",
+    "publisher": "Working Designs",
+    "title": "Mystical Ninja Goemon Zero",
+    "year": 2005
+  },
+  "79175": {
+    "developer": "Atlus",
+    "platform": "ps2",
+    "publisher": "Atlus",
+    "title": "Shin Megami Tensei: Nocturne",
+    "year": 2004
+  },
+  "79405": {
+    "developer": "Human Head Studios",
+    "platform": "ps2",
+    "publisher": "Take 2 Interactive",
+    "title": "Rune: Viking Warlord",
+    "year": 2001
+  },
+  "79926": {
+    "developer": "Ganbarion",
+    "platform": "wii",
+    "publisher": "Nintendo",
+    "title": "Pandora's Tower (Undub)",
+    "year": 2012
+  },
+  "81191": {
+    "developer": "KCET",
+    "platform": "ps2",
+    "publisher": "Konami",
+    "title": "The Sword of Etheria (Undub)",
+    "year": 2006
+  },
+  "82141": {
+    "developer": "Sega",
+    "platform": "ps2",
+    "publisher": "Sega",
+    "title": "Blood Will Tell: Tezuka Osamu's Dororo",
+    "year": 2005
+  },
+  "86644": {
+    "developer": "Sakitoshi",
+    "platform": "ps1",
+    "title": "Chaos Break (NTSC)",
+    "year": 2024
+  },
+  "86663": {
+    "developer": "Capcom",
+    "platform": "ps2",
+    "publisher": "Capcom",
+    "title": "Chaos Legion",
+    "year": 2003
+  },
+  "88669": {
+    "developer": "Atlus",
+    "platform": "saturn",
+    "publisher": "Atlus",
+    "title": "Princess Crown",
+    "year": 1997
+  },
+  "88789": {
+    "developer": "Toys For Bob",
+    "platform": "ps1",
+    "publisher": "Bandai",
+    "title": "Magical Hoppers",
+    "year": 1997
+  },
+  "88897": {
+    "developer": "Natsume",
+    "platform": "gamecube",
+    "publisher": "Natsume",
+    "title": "Medabots: Infinity",
+    "year": 2003
+  },
+  "89571": {
+    "developer": "SCE Japan Studio",
+    "platform": "ps2",
+    "publisher": "Konami",
+    "title": "Lifeline",
+    "year": 2003
+  },
+  "90066": {
+    "developer": "Mindscape International",
+    "platform": "ps1",
+    "publisher": "Mindscape",
+    "title": "Steel Harbinger",
+    "year": 1996
+  },
+  "91339": {
+    "developer": "Atlus",
+    "platform": "ps1",
+    "publisher": "Atlus",
+    "title": "Shin Megami Tensei",
+    "year": 2001
+  },
+  "982": {
+    "developer": "Contrail",
+    "platform": "ps1",
+    "publisher": "Activision",
+    "title": "Alundra 2 : Une légende est née",
+    "year": 2000
+  },
+  "989": {
+    "developer": "Dream Factory",
+    "platform": "ps1",
+    "publisher": "Squaresoft",
+    "title": "Ehrgeiz : God Bless the Ring",
+    "year": 2000
+  },
+  "993": {
+    "developer": "Argonaut",
+    "platform": "ps1",
+    "publisher": "Electronic Arts",
+    "title": "Harry Potter à l'école des sorciers",
+    "year": 2001
+  }
+}

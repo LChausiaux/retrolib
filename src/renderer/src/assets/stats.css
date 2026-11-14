@@ -1,0 +1,143 @@
+/* Styles communs à la page Stats et au bloc stats de la fiche du jeu (même modèle,
+   en réduit sur la fiche). Tout est préfixé par .stats-ui : ".card" est déjà utilisé
+   par les cartes de la bibliothèque. */
+
+.stats-ui .hero {
+  display: grid;
+  grid-template-columns: 1.6fr repeat(4, 1fr);
+  gap: 12px;
+}
+.stats-ui .hero-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  min-width: 0;
+}
+.stats-ui .hero-tile.main {
+  background: linear-gradient(135deg, rgba(85, 102, 238, 0.35), rgba(85, 102, 238, 0.1));
+  border-color: rgba(120, 140, 255, 0.35);
+}
+.stats-ui .hero-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.stats-ui .hero-tile.main .hero-value {
+  font-size: 2rem;
+}
+.stats-ui .hero-label {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+.stats-ui .empty {
+  margin: 0;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: rgba(120, 140, 255, 0.08);
+  font-size: 0.85rem;
+}
+.stats-ui .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+}
+.stats-ui .card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  min-width: 0;
+}
+.stats-ui .card.wide {
+  grid-column: 1 / -1;
+}
+.stats-ui .card-header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.stats-ui .card-header h2 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+.stats-ui .card-sub {
+  font-size: 0.72rem;
+  opacity: 0.5;
+}
+.stats-ui .card-empty {
+  margin: 0;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+.stats-ui .clickable {
+  cursor: pointer;
+}
+.stats-ui .clickable:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Records */
+.stats-ui .records,
+.stats-ui .sessions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.stats-ui .records {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.8rem;
+}
+.stats-ui .records li {
+  display: flex;
+  gap: 8px;
+  opacity: 0.85;
+}
+
+/* Dernières parties */
+.stats-ui .sessions {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.stats-ui .sessions li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+}
+.stats-ui .session-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.stats-ui .session-meta {
+  opacity: 0.55;
+  white-space: nowrap;
+  font-size: 0.75rem;
+}
+.stats-ui .live-dot {
+  color: #8fdcaa;
+}
+
+@media (max-width: 1100px) {
+  .stats-ui .hero {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stats-ui .hero-tile.main {
+    grid-column: 1 / -1;
+  }
+}

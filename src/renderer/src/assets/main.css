@@ -1,0 +1,64 @@
+@import './theme.css';
+@import './base.css';
+@import './stats.css';
+
+/* La cible originale de electron-vite (page de démo avec logo, watermark en fond,
+   contenu centré verticalement) ne convient pas à une vraie application : ces règles
+   empêchaient #app/.app de remplir toute la fenêtre (visible surtout en grand, avec
+   des marges/un fond qui dépassaient autour du contenu). RetroLib doit occuper 100%
+   de la fenêtre, quelle que soit sa taille. */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  user-select: none;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Barres de défilement discrètes, assorties au thème sombre. */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #26262b;
+  border-radius: 999px;
+  border: 2px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #34343a;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+/* Navigation manette / clavier (voir navigation.js) : cadre de focus bien visible,
+   affiché seulement quand on navigue sans la souris (classe posée sur <html>). */
+html.nav-focus :focus {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+html:not(.nav-focus) :focus:not(:focus-visible) {
+  outline: none;
+}

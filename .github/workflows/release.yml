@@ -1,0 +1,46 @@
+# Publie une nouvelle version de RetroLib : pousser un tag "v<version>" (identique au
+# champ version de package.json) construit l'installeur Windows et le publie, avec
+# latest.yml, dans les Releases GitHub. Les RetroLib installées le détectent et se
+# mettent à jour (electron-updater, voir src/main/updater.js).
+#
+#   npm version patch --no-git-tag-version
+#   git commit -am "..." && git tag v2.4.1 && git push && git push --tags
+
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Vérifier que le tag correspond à package.json
+        shell: bash
+        run: |
+          version=$(node -p "require('./package.json').version")
+          if [ "v$version" != "$GITHUB_REF_NAME" ]; then
+            echo "Le tag $GITHUB_REF_NAME ne correspond pas à la version $version de package.json"
+            exit 1
+          fi
+
+      - run: npm ci
+
+      - run: npm test
+
+      - name: Construire et publier l'installeur
+        run: npm run build && npx electron-builder --win --publish always
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
