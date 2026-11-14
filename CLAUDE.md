@@ -29,8 +29,10 @@ au-dessus d'une installation RomStation.
   y lisent les mises à jour sans compte).
 - Les RetroLib installées se mettent à jour via electron-updater (`src/main/updater.js`)
   depuis les Releases GitHub.
-- Publier une version : committer, puis poser et pousser le tag `v<version>` identique
-  à `package.json` (`git tag v2.4.1 && git push && git push --tags`). Le workflow
-  `.github/workflows/release.yml` construit l'installeur et crée la release.
+- **Chaque push s'accompagne d'une release** : après `git push`, poser et pousser le tag
+  `v<version>` identique à `package.json` (la version doit avoir été incrémentée depuis
+  le dernier tag, un tag ne se réutilise pas) :
+  `git push && git tag v2.4.1 && git push origin v2.4.1`. Le workflow
+  `.github/workflows/release.yml` construit alors l'installeur et crée la release.
 - Ne pas changer `appId` dans `electron-builder.yml` : les installations existantes ne
   seraient plus mises à jour par-dessus.
