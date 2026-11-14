@@ -102,11 +102,6 @@ const SORT_MODES = [
   { value: 'playtime', label: 'Temps de jeu' },
   { value: 'year', label: 'Année' }
 ]
-const COVER_SIZES = [
-  { value: 'compact', label: 'Compact' },
-  { value: 'normal', label: 'Confort' },
-  { value: 'large', label: 'Grand' }
-]
 const STATS_PERIODS = [
   { value: 'all', label: 'Depuis toujours' },
   { value: 'year', label: '12 derniers mois' },
@@ -122,11 +117,6 @@ const sortMode = usePreference(
   'retrolib.sort',
   SORT_MODES.map((m) => m.value),
   'title'
-)
-const coverSize = usePreference(
-  'retrolib.coverSize',
-  COVER_SIZES.map((m) => m.value),
-  'normal'
 )
 
 // Ctrl+K : place le curseur dans la recherche.
@@ -491,15 +481,6 @@ onUnmounted(() => {
               </select>
               <AppIcon name="chevron-down" :size="14" :stroke="2" />
             </label>
-            <label class="select-wrap">
-              <span class="sr-only">Taille</span>
-              <select v-model="coverSize">
-                <option v-for="size in COVER_SIZES" :key="size.value" :value="size.value">
-                  {{ size.label }}
-                </option>
-              </select>
-              <AppIcon name="chevron-down" :size="14" :stroke="2" />
-            </label>
             <div class="view-toggle" role="group" aria-label="Affichage">
               <button
                 v-for="mode in VIEW_MODES"
@@ -645,7 +626,6 @@ onUnmounted(() => {
           :group-favorites="platformFilter !== '__recent__' && platformFilter !== '__favorites__'"
           :show-resume="!search.trim() && platformFilter !== '__recent__'"
           :mixed-platforms="!platformFilter || platformFilter.startsWith('__')"
-          :cover-size="coverSize"
           :platform-catalog="platformCatalog"
           :launching-game-id="launchingGameId"
           :launch-progress="launchProgress"

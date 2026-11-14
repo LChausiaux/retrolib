@@ -157,7 +157,10 @@ const FOOTER = [
             :class="{ active: platformFilter === opt.value }"
             @click="emit('select-platform', opt.value)"
           >
-            <span class="nav-label">{{ opt.label }}</span>
+            <span class="nav-label-wrap">
+              <PlatformIcon :platform="opt.value" :size="16" />
+              <span class="nav-label">{{ opt.label }}</span>
+            </span>
             <span class="nav-count">{{ opt.count }}</span>
           </button>
         </div>

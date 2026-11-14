@@ -19,7 +19,6 @@ const props = defineProps({
   showResume: { type: Boolean, default: true },
   // Vue toutes plateformes : plateforme affichée sur chaque jeu, étagères par console.
   mixedPlatforms: { type: Boolean, default: false },
-  coverSize: { type: String, default: 'normal' }, // 'compact' | 'normal' | 'large'
   platformCatalog: { type: Object, default: () => ({ labels: {} }) },
   launchingGameId: { type: String, default: null },
   launchProgress: { type: Object, default: null },
@@ -95,11 +94,6 @@ const shelves = computed(() => {
   }))
   return orderByFamily(groups)
 })
-
-const gridMin = computed(() => ({ compact: 124, normal: 156, large: 200 })[props.coverSize] || 156)
-const pxPerMm = computed(
-  () => ({ compact: 0.95, normal: 1.15, large: 1.4 })[props.coverSize] || 1.15
-)
 
 function metaFor(game) {
   const parts = []
@@ -214,11 +208,7 @@ const focusedBoxId = ref(null)
         </div>
 
         <!-- Grille -->
-        <div
-          v-if="view === 'grid'"
-          class="grid"
-          :style="{ gridTemplateColumns: `repeat(auto-fill, minmax(${gridMin}px, 1fr))` }"
-        >
+        <div v-if="view === 'grid'" class="grid">
           <div
             v-for="game in section === 'favorites' ? favorites : sortedGames"
             :key="game.id"
@@ -385,7 +375,6 @@ const focusedBoxId = ref(null)
                 <GameBox3D
                   :game="game"
                   :platform-label="game.platform ? platformLabel(game.platform) : ''"
-                  :px-per-mm="pxPerMm"
                   :active="focusedBoxId === game.id"
                 />
                 <div class="caption">
@@ -627,6 +616,7 @@ const focusedBoxId = ref(null)
 /* --- Grille --- */
 .grid {
   display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(156px, 1fr));
   gap: 28px 20px;
 }
 .card {
