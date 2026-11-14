@@ -25,6 +25,20 @@ function setState(next) {
   for (const listener of listeners) listener(state)
 }
 
+// Les erreurs d'electron-updater embarquent les en-têtes HTTP complets : on n'en garde
+// que l'essentiel pour l'affichage (le détail reste dans la console).
+function shortError(error) {
+  const message = error?.message || String(error)
+  if (/latest\.yml/i.test(message) && /404/.test(message)) {
+    return 'aucune version publiée trouvée sur GitHub (latest.yml absent de la dernière release).'
+  }
+  if (/ENOTFOUND|ETIMEDOUT|ECONNRESET|ERR_INTERNET_DISCONNECTED/.test(message)) {
+    return 'pas de connexion à GitHub.'
+  }
+  const firstLine = message.split('\n')[0]
+  return firstLine.length > 160 ? firstLine.slice(0, 157) + '…' : firstLine
+}
+
 export function getUpdateState() {
   return { ...state, currentVersion: app.getVersion() }
 }
@@ -42,7 +56,7 @@ export async function checkForUpdates() {
   try {
     await autoUpdater.checkForUpdates()
   } catch (error) {
-    setState({ status: 'error', error: error?.message || String(error) })
+    setState({ status: 'error', error: shortError(error) })
   }
   return getUpdateState()
 }
@@ -74,9 +88,7 @@ export function startAutoUpdates() {
   autoUpdater.on('update-downloaded', (info) =>
     setState({ status: 'downloaded', version: info.version })
   )
-  autoUpdater.on('error', (error) =>
-    setState({ status: 'error', error: error?.message || String(error) })
-  )
+  autoUpdater.on('error', (error) => setState({ status: 'error', error: shortError(error) }))
 
   setTimeout(checkForUpdates, FIRST_CHECK_DELAY_MS)
   setInterval(checkForUpdates, CHECK_INTERVAL_MS).unref?.()

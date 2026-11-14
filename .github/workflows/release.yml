@@ -40,7 +40,22 @@ jobs:
 
       - run: npm test
 
-      - name: Construire et publier l'installeur
-        run: npm run build && npx electron-builder --win --publish always
+      # Construction sans publication par electron-builder : il envoie ses fichiers en
+      # parallèle et chaque envoi créait sa propre release pour le même tag (l'une avec
+      # l'installeur, l'autre avec le seul .blockmap). GitHub désignait alors comme
+      # « latest » une release sans latest.yml, et les mises à jour échouaient.
+      - name: Construire l'installeur
+        run: npm run build && npx electron-builder --win --publish never
+
+      # Une seule release, créée d'un coup avec les trois fichiers utiles à
+      # electron-updater. Une release existante pour ce tag (relance du workflow) est
+      # remplacée.
+      - name: Publier la release
+        shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          version=$(node -p "require('./package.json').version")
+          gh release delete "$GITHUB_REF_NAME" --yes 2>/dev/null || true
+          files=("dist/retrolib-$version-setup.exe" "dist/retrolib-$version-setup.exe.blockmap" dist/latest.yml)
+          gh release create "$GITHUB_REF_NAME" "${files[@]}" --title "RetroLib $version" --generate-notes --latest
