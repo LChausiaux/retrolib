@@ -1,4 +1,4 @@
-import { basename } from 'path'
+import { basename, resolve, sep } from 'path'
 import { stat as fsStat } from 'fs/promises'
 import { statSync } from 'fs'
 import { readRomStationConfig } from './romstation-config'
@@ -16,6 +16,7 @@ import {
   getEmulatorLaunchOptions,
   getFavorites,
   getGameMetadataOverrides,
+  getIgnoredPaths,
   getCachedExeVersion,
   setCachedExeVersion
 } from './config'
@@ -134,9 +135,22 @@ function coverUrlFor(path) {
   return path ? 'retrolib-cover:' + encodeURIComponent(path) + coverVersion(path) : null
 }
 
+// Chemin ignoré (voir config.js: getIgnoredPaths) : le dossier ou fichier lui-même,
+// ou tout ce qui se trouve dessous. Comparaison insensible à la casse (Windows).
+function isUnderIgnored(path, ignored) {
+  if (!path) return false
+  const target = resolve(path).toLowerCase()
+  return ignored.some((p) => target === p || target.startsWith(p + sep))
+}
+
 export function buildLibrary(installRoot) {
   const { gamesPath, emulatorsPath } = readRomStationConfig(installRoot)
   const rawGames = scanGamesDirectory(gamesPath)
+  const ignoredPaths = getIgnoredPaths()
+  const ignored = ignoredPaths.map((p) => resolve(p).toLowerCase())
+  const visibleGames = rawGames.filter(
+    (game) => !isUnderIgnored(game.folderPath || game.romPath, ignored)
+  )
   const installedEmulators = scanInstalledEmulators(emulatorsPath)
   const overrides = getOverrides()
   const emulatorPreferences = getEmulatorPreferences()
@@ -154,7 +168,7 @@ export function buildLibrary(installRoot) {
     emulatorStatus.map((entry) => [entry.platform, entry])
   )
 
-  const games = rawGames.map((game) => {
+  const games = visibleGames.map((game) => {
     const platform = game.platform || overrides[game.id] || null
     const status = platform ? statusByPlatform[platform] : null
     // Métadonnées corrigées à la main (page du jeu, voir config.js) : un champ laissé
@@ -246,6 +260,7 @@ export function buildLibrary(installRoot) {
     // library-watcher.js).
     gamesPath,
     fingerprint: libraryFingerprint(rawGames),
+    ignoredPaths,
     installedEmulators,
     platformsWithChoice,
     emulatorStatus: emulatorStatusWithCounts

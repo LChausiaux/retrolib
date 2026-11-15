@@ -52,6 +52,22 @@ export function setOverride(gameId, platform) {
   writeSettings(settings)
 }
 
+// Éléments ignorés : chemins (dossier ou fichier) du dossier des jeux à ne pas
+// afficher dans la bibliothèque, typiquement un dossier temporaire de RomStation
+// reconnu à tort comme un jeu. Un jeu situé sous un chemin ignoré l'est aussi.
+export function getIgnoredPaths() {
+  const settings = readSettings()
+  return Array.isArray(settings.ignoredPaths) ? settings.ignoredPaths : []
+}
+
+export function setPathIgnored(path, ignored) {
+  const settings = readSettings()
+  const key = path.toLowerCase()
+  const others = getIgnoredPaths().filter((p) => p.toLowerCase() !== key)
+  settings.ignoredPaths = ignored ? [...others, path] : others
+  writeSettings(settings)
+}
+
 // Préférences d'émulateur : quand plusieurs émulateurs sont installés pour la même
 // plateforme (ex: Switch -> Eden ou Ryujinx), lequel utiliser par défaut.
 export function getEmulatorPreferences() {

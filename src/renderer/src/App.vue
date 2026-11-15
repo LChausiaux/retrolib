@@ -30,6 +30,8 @@ const {
   platformsWithChoice,
   platformCatalog,
   emulatorStatus,
+  gamesPath,
+  ignoredPaths,
   loadLibrary,
   chooseFolder,
   patchGame
@@ -322,6 +324,18 @@ watch(
 
 // --- Actions sur les jeux ---
 
+// Réglages > Bibliothèque : masquer un dossier/fichier reconnu à tort comme un jeu
+// (dossier temporaire de RomStation...), ou le rétablir.
+async function handleSetIgnored(path, ignored) {
+  try {
+    await window.api.setPathIgnored(path, ignored)
+  } catch (err) {
+    launchError.value = ipcErrorMessage(err)
+  }
+  await loadLibrary()
+  loadLibraryMetadata()
+}
+
 async function handleAssignPlatform(gameId, platform) {
   await window.api.setPlatformOverride(gameId, platform)
   await loadLibrary()
@@ -582,6 +596,8 @@ onUnmounted(() => {
           :section="settingsSection"
           :install-root="installRoot"
           :ambiguous-games="ambiguousGames"
+          :games-path="gamesPath"
+          :ignored-paths="ignoredPaths"
           :platform-catalog="platformCatalog"
           :games="enrichedGames"
           :now="now"
@@ -591,6 +607,7 @@ onUnmounted(() => {
           @open-game="openGameFromStats"
           @choose-folder="chooseFolder"
           @assign-platform="handleAssignPlatform"
+          @set-ignored="handleSetIgnored"
         />
 
         <GamePage

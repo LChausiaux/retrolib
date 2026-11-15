@@ -22,6 +22,7 @@ import {
   setEmulatorPathOverride,
   setEmulatorLaunchOptions,
   setFavorite,
+  setPathIgnored,
   setGameMetadataOverride,
   getCoverSourceSettings,
   setCoverSourceSettings
@@ -268,13 +269,15 @@ function registerIpcHandlers() {
     }
     if (!installRoot) return { configured: false, games: [], platformCatalog }
     try {
-      const { games, platformsWithChoice, emulatorStatus, gamesPath, fingerprint } =
+      const { games, platformsWithChoice, emulatorStatus, gamesPath, fingerprint, ignoredPaths } =
         buildLibrary(installRoot)
       libraryWatcher.update(gamesPath, fingerprint)
       return {
         configured: true,
         installRoot,
         games,
+        gamesPath,
+        ignoredPaths,
         platformsWithChoice,
         emulatorStatus,
         platformCatalog
@@ -372,6 +375,14 @@ function registerIpcHandlers() {
     return true
   })
 
+  // Réglages > Bibliothèque : ignorer (ou rétablir) un dossier ou fichier du dossier des
+  // jeux, voir config.js: getIgnoredPaths.
+  ipcMain.handle('library:setIgnored', (_event, { path, ignored }) => {
+    if (typeof path !== 'string' || !path) return false
+    setPathIgnored(path, Boolean(ignored))
+    return true
+  })
+
   ipcMain.handle('library:setFavorite', (_event, { gameId, favorite }) => {
     setFavorite(gameId, favorite)
     return true
@@ -414,12 +425,17 @@ function registerIpcHandlers() {
     return setGameCoverImage({ folderPath, romPath }, tempPath, face)
   })
 
-  // Réglages : récupère les dos et tranches manquants depuis la base LaunchBox (voir
-  // launchbox-db.js), avec une progression envoyée à la fenêtre.
+  // Réglages : récupère les dos et tranches manquants depuis la base LaunchBox, puis
+  // ScreenScraper en secours s'il est configuré (voir launchbox-db.js), avec une
+  // progression envoyée à la fenêtre.
   ipcMain.handle('covers:importBoxArt', (event, games) => {
-    return importMissingBoxArt(games, (progress) => {
-      if (!event.sender.isDestroyed()) event.sender.send('covers:importProgress', progress)
-    })
+    return importMissingBoxArt(
+      games,
+      (progress) => {
+        if (!event.sender.isDestroyed()) event.sender.send('covers:importProgress', progress)
+      },
+      { fallback: true }
+    )
   })
 
   // Démarrage / nouveau scan : ajoute le dos français (sinon européen) des jeux qui

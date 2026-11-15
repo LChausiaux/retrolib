@@ -7,7 +7,11 @@ import { openZipEntryStream } from './zip-extract'
 import { prepareTitle, titleSimilarity, strictTitleScore } from './title-match'
 import { parseMetadata } from './launchbox-parse'
 import { readJsonFile, writeJsonFile } from './json-store'
-import { downloadCoverCandidate } from './cover-sources'
+import {
+  downloadCoverCandidate,
+  findScreenScraperBoxArt,
+  screenScraperAvailable
+} from './cover-sources'
 import { setGameCoverImage } from './game-cover'
 
 // Base LaunchBox Games DB (gamesdb.launchbox-app.com) : publique, sans compte. Son
@@ -405,22 +409,33 @@ export function cancelBulkImport() {
 let bulkRunning = false
 
 // options.backsOnly : seulement les dos (ajout automatique au démarrage).
-export async function importMissingBoxArt(games, onProgress, { backsOnly = false } = {}) {
+// options.fallback : ScreenScraper interrogé quand LaunchBox n'a rien (bouton des
+// Réglages ; pas l'ajout automatique, pour ne pas entamer le quota à chaque démarrage).
+export async function importMissingBoxArt(
+  games,
+  onProgress,
+  { backsOnly = false, fallback = false } = {}
+) {
   if (bulkRunning) throw new Error('Une récupération des dos et tranches est déjà en cours.')
   bulkRunning = true
   try {
-    return await runImport(games, onProgress, backsOnly)
+    return await runImport(games, onProgress, backsOnly, fallback)
   } finally {
     bulkRunning = false
   }
 }
 
-async function runImport(games, onProgress, backsOnly) {
+async function runImport(games, onProgress, backsOnly, fallback) {
   bulkCancelled = false
   const report = {
     total: 0,
     backs: 0,
     spines: 0,
+    // Dos et tranches venus de ScreenScraper (secours), compris dans backs/spines.
+    fromScreenScraper: 0,
+    // Première erreur ScreenScraper (identifiants, quota) : la source est alors
+    // abandonnée pour le reste de l'import.
+    screenScraperError: null,
     unmatched: 0,
     noFolder: 0,
     errors: 0,
@@ -446,6 +461,7 @@ async function runImport(games, onProgress, backsOnly) {
   }
   report.total = todo.length
 
+  let useScreenScraper = fallback
   let done = 0
   const queue = [...todo]
   const worker = async () => {
@@ -453,25 +469,46 @@ async function runImport(games, onProgress, backsOnly) {
       const game = queue.shift()
       try {
         const match = autoMatch(index, game.platform, game.title)
-        if (!match) {
-          report.unmatched++
-          report.attempted.push(game.id)
-        } else {
-          const images = index.images[match.id] || {}
-          const target = { folderPath: game.folderPath, romPath: game.romPath }
-          const back = !game.hasBack && bestBack(images.back)
-          const spine = !backsOnly && !game.hasSpine && bestImage(images.spine)
-          if (back) {
-            setGameCoverImage(target, await downloadCoverCandidate(imageUrl(back[0])), 'back')
-            report.backs++
+        const images = (match && index.images[match.id]) || {}
+        const lbBack = !game.hasBack && bestBack(images.back)
+        const lbSpine = !backsOnly && !game.hasSpine && bestImage(images.spine)
+        let backUrl = lbBack ? imageUrl(lbBack[0]) : null
+        let spineUrl = lbSpine ? imageUrl(lbSpine[0]) : null
+
+        // Secours ScreenScraper pour ce que LaunchBox n'a pas.
+        const wantBack = !game.hasBack && !backUrl
+        const wantSpine = !backsOnly && !game.hasSpine && !spineUrl
+        if (useScreenScraper && (wantBack || wantSpine) && screenScraperAvailable(game.platform)) {
+          try {
+            const found = await findScreenScraperBoxArt(game.platform, cleanTitle(game.title))
+            if (wantBack && found?.back) {
+              backUrl = found.back
+              report.fromScreenScraper++
+            }
+            if (wantSpine && found?.spine) {
+              spineUrl = found.spine
+              report.fromScreenScraper++
+            }
+          } catch (err) {
+            if (useScreenScraper) {
+              useScreenScraper = false
+              report.screenScraperError =
+                err?.name === 'AbortError' ? 'ScreenScraper : délai dépassé' : err?.message
+            }
           }
-          if (spine) {
-            setGameCoverImage(target, await downloadCoverCandidate(imageUrl(spine[0])), 'spine')
-            report.spines++
-          }
-          if (!back && !spine) report.unmatched++
-          report.attempted.push(game.id)
         }
+
+        const target = { folderPath: game.folderPath, romPath: game.romPath }
+        if (backUrl) {
+          setGameCoverImage(target, await downloadCoverCandidate(backUrl), 'back')
+          report.backs++
+        }
+        if (spineUrl) {
+          setGameCoverImage(target, await downloadCoverCandidate(spineUrl), 'spine')
+          report.spines++
+        }
+        if (!backUrl && !spineUrl) report.unmatched++
+        report.attempted.push(game.id)
       } catch {
         report.errors++
       }

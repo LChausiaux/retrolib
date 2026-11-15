@@ -11,6 +11,7 @@ const api = {
   cleanStorage: (games) => ipcRenderer.invoke('storage:clean', games),
   setPlatformOverride: (gameId, platform) =>
     ipcRenderer.invoke('library:setOverride', { gameId, platform }),
+  setPathIgnored: (path, ignored) => ipcRenderer.invoke('library:setIgnored', { path, ignored }),
   setFavorite: (gameId, favorite) =>
     ipcRenderer.invoke('library:setFavorite', { gameId, favorite }),
   setGameMetadata: (gameId, metadata) =>

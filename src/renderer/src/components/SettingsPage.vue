@@ -9,6 +9,8 @@ import SettingsStorage from './SettingsStorage.vue'
 const props = defineProps({
   installRoot: { type: String, default: null },
   ambiguousGames: { type: Array, required: true },
+  gamesPath: { type: String, default: null },
+  ignoredPaths: { type: Array, default: () => [] },
   platformCatalog: { type: Object, required: true },
   games: { type: Array, default: () => [] }, // bibliothèque enrichie (voir App.vue)
   now: { type: Number, required: true },
@@ -21,7 +23,8 @@ const emit = defineEmits([
   'library-changed',
   'storage-cleaned',
   'error',
-  'open-game'
+  'open-game',
+  'set-ignored'
 ])
 
 const SECTION_INTROS = {
@@ -182,6 +185,22 @@ function onAssign(gameId, event) {
   emit('assign-platform', gameId, platform)
 }
 
+// Chemin affiché relativement au dossier des jeux RomStation (plus lisible).
+function displayPath(path) {
+  if (!path) return ''
+  const base = props.gamesPath
+  if (base && path.toLowerCase().startsWith(base.toLowerCase())) {
+    return path.slice(base.length).replace(/^[\\/]+/, '') || path
+  }
+  return path
+}
+
+// Élément à ignorer pour un jeu : son dossier (jeu ajouté à la main, dossier
+// temporaire...) ou, à défaut, le fichier lui-même.
+function ignorablePath(game) {
+  return game.folderPath || game.romPath
+}
+
 function platformLabel(platform) {
   return props.platformCatalog.labels[platform] || platform
 }
@@ -221,7 +240,10 @@ function platformLabel(platform) {
             </p>
             <ul class="list">
               <li v-for="game in ambiguousGames" :key="game.id" class="list-row">
-                <span class="game-title">{{ game.title }}</span>
+                <span class="game-info">
+                  <span class="game-title">{{ game.title }}</span>
+                  <span class="game-path">{{ displayPath(ignorablePath(game)) }}</span>
+                </span>
                 <select value="" @change="onAssign(game.id, $event)">
                   <option value="" disabled>Choisir la plateforme…</option>
                   <option
@@ -232,10 +254,37 @@ function platformLabel(platform) {
                     {{ platformLabel(platform) }}
                   </option>
                 </select>
+                <button
+                  type="button"
+                  class="btn small"
+                  title="Ne plus afficher ce dossier dans la bibliothèque"
+                  @click="emit('set-ignored', ignorablePath(game), true)"
+                >
+                  Ignorer
+                </button>
               </li>
             </ul>
           </template>
           <p v-else class="hint flush">Tous les jeux ont une plateforme : rien à faire.</p>
+        </section>
+
+        <section v-if="ignoredPaths.length" class="card">
+          <div class="card-head">
+            <h3>Éléments ignorés</h3>
+            <span class="badge">{{ ignoredPaths.length }}</span>
+          </div>
+          <p class="hint">
+            Ces dossiers ou fichiers du dossier des jeux ne sont pas affichés dans la bibliothèque
+            (dossier temporaire de RomStation, fichier qui n’est pas un jeu…).
+          </p>
+          <ul class="list">
+            <li v-for="path in ignoredPaths" :key="path" class="list-row">
+              <span class="game-path strong" :title="path">{{ displayPath(path) }}</span>
+              <button type="button" class="btn small" @click="emit('set-ignored', path, false)">
+                Ne plus ignorer
+              </button>
+            </li>
+          </ul>
         </section>
       </template>
 
@@ -245,9 +294,11 @@ function platformLabel(platform) {
           <h3>Dos et tranches des boîtes</h3>
           <p class="hint">
             Récupérés depuis la base LaunchBox (gratuite, sans compte) pour les jeux qui n’en ont
-            pas encore, éditions françaises puis européennes en priorité. Ils habillent les boîtes
-            3D (sinon générés à partir de la jaquette). La base est téléchargée une fois (~110 Mo)
-            puis gardée 30 jours.
+            pas encore, éditions françaises puis européennes en priorité, puis depuis ScreenScraper
+            pour ceux que LaunchBox n’a pas (si ses identifiants sont renseignés ci-dessous).
+            SteamGridDB ne propose ni dos ni tranches. Ils habillent les boîtes 3D (sinon générés à
+            partir de la jaquette). La base LaunchBox est téléchargée une fois (~110 Mo) puis gardée
+            30 jours.
           </p>
           <label class="check-row">
             <input type="checkbox" :checked="autoBacks" @change="toggleAutoBacks" />
@@ -279,11 +330,16 @@ function platformLabel(platform) {
             <p v-if="importReport" class="import-report">
               {{ importReport.cancelled ? 'Import arrêté' : 'Terminé' }} :
               {{ importReport.backs }} dos et {{ importReport.spines }} tranches ajoutés<template
-                v-if="importReport.unmatched"
+                v-if="importReport.fromScreenScraper"
               >
+                (dont {{ importReport.fromScreenScraper }} via ScreenScraper)</template
+              ><template v-if="importReport.unmatched">
                 · {{ importReport.unmatched }} jeux sans dos français ou européen trouvé (à faire
                 depuis la fiche du jeu)</template
               ><template v-if="importReport.errors"> · {{ importReport.errors }} erreurs</template>.
+            </p>
+            <p v-if="importReport?.screenScraperError" class="import-error">
+              ScreenScraper abandonné en cours d’import : {{ importReport.screenScraperError }}
             </p>
             <p v-if="importError" class="import-error">{{ importError }}</p>
           </template>
@@ -513,11 +569,34 @@ function platformLabel(platform) {
   border-bottom: none;
   padding-bottom: 0;
 }
-.game-title {
+.game-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.game-title,
+.game-path {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   min-width: 0;
+}
+.game-path {
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--text-4);
+}
+.game-path.strong {
+  flex: 1;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.btn.small {
+  height: 32px;
+  padding: 0 12px;
+  font-size: 12.5px;
 }
 select,
 .field-grid input {

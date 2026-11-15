@@ -4,7 +4,7 @@ import { writeFile } from 'fs/promises'
 import { join } from 'path'
 import { tmpdir } from 'os'
 import { getCoverSourceSettings } from './config'
-import { titleSimilarity } from './title-match'
+import { titleSimilarity, strictTitleScore } from './title-match'
 import { searchLaunchbox, getLaunchboxState, ensureLaunchboxIndex } from './launchbox-db'
 
 // Recherche de jaquettes en ligne pour la fenêtre "Choisir une jaquette" (page du
@@ -218,12 +218,9 @@ function pickName(noms = []) {
   return noms[0]?.text || ''
 }
 
-// face = 'front' : box-2D / box-3D ; face = 'back' : box-2D-back (dos de la boîte à
-// plat, par région comme les faces avant). Seule source à proposer des dos.
-async function searchScreenScraper(platform, query, settings, face = 'front') {
-  const wanted = face === 'back' ? ['box-2D-back'] : ['box-2D', 'box-3D']
-  const systemId = SCREENSCRAPER_SYSTEMS[platform]
-  if (!systemId) return []
+// Jeux ScreenScraper dont le nom ressemble à la requête (jeuRecherche.php), avec
+// leurs médias. Erreur explicite si l'API refuse (identifiants, quota dépassé...).
+async function fetchScreenScraperGames(systemId, query, settings) {
   const params = new URLSearchParams({
     devid: settings.ssDevId,
     devpassword: settings.ssDevPassword,
@@ -248,9 +245,19 @@ async function searchScreenScraper(platform, query, settings, face = 'front') {
     // En cas d'erreur, l'API répond en texte brut ("Erreur de login : ...").
     throw new Error(`ScreenScraper : ${text.trim().slice(0, 140) || `HTTP ${response.status}`}`)
   }
+  return data?.response?.jeux || []
+}
+
+// face = 'front' : box-2D / box-3D ; face = 'back' : box-2D-back (dos de la boîte à
+// plat, par région comme les faces avant).
+async function searchScreenScraper(platform, query, settings, face = 'front') {
+  const wanted = face === 'back' ? ['box-2D-back'] : ['box-2D', 'box-3D']
+  const systemId = SCREENSCRAPER_SYSTEMS[platform]
+  if (!systemId) return []
+  const jeux = await fetchScreenScraperGames(systemId, query, settings)
 
   const results = []
-  for (const jeu of data?.response?.jeux || []) {
+  for (const jeu of jeux) {
     if (!jeu?.id) continue
     const name = pickName(jeu.noms)
     const score = Math.max(
@@ -282,6 +289,62 @@ async function searchScreenScraper(platform, query, settings, face = 'front') {
     }
   }
   return results
+}
+
+// Import groupé des dos et tranches (Réglages, voir launchbox-db.js: runImport) :
+// ScreenScraper sert de secours quand LaunchBox n'a rien pour un jeu. Mêmes règles
+// que pour LaunchBox : correspondance quasi exacte du titre, dos français sinon
+// européen uniquement, tranche (box-2D-side) de n'importe quelle région, France en
+// tête. Les requêtes passent une par une (les comptes gratuits n'ont droit qu'à une
+// requête simultanée).
+export function screenScraperAvailable(platform) {
+  return Boolean(
+    SCREENSCRAPER_SYSTEMS[platform] && screenScraperConfigured(getCoverSourceSettings())
+  )
+}
+
+let screenScraperQueue = Promise.resolve()
+
+function oneAtATime(task) {
+  const run = screenScraperQueue.then(task, task)
+  screenScraperQueue = run.catch(() => {})
+  return run
+}
+
+const SS_SPINE_REGIONS = ['fr', 'eu', 'wor', 'ss', 'us', 'jp']
+
+export async function findScreenScraperBoxArt(platform, title) {
+  const settings = getCoverSourceSettings()
+  const systemId = SCREENSCRAPER_SYSTEMS[platform]
+  if (!systemId || !screenScraperConfigured(settings)) return null
+  const jeux = await oneAtATime(() => fetchScreenScraperGames(systemId, title, settings))
+
+  let best = null
+  let bestScore = 0
+  for (const jeu of jeux) {
+    const score = Math.max(0, ...(jeu.noms || []).map((n) => strictTitleScore(title, n.text)))
+    if (score > bestScore) {
+      best = jeu
+      bestScore = score
+    }
+  }
+  if (!best || bestScore < 0.85) return null
+
+  const image = (media) =>
+    media && ['png', 'jpg', 'jpeg'].includes(String(media.format).toLowerCase())
+  const pick = (type, regions) => {
+    for (const region of regions) {
+      const found = (best.medias || []).find(
+        (m) => m.type === type && m.region === region && image(m)
+      )
+      if (found) return found.url
+    }
+    return null
+  }
+  return {
+    back: pick('box-2D-back', ['fr', 'eu']),
+    spine: pick('box-2D-side', SS_SPINE_REGIONS)
+  }
 }
 
 // --- SteamGridDB -------------------------------------------------------------------

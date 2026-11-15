@@ -11,6 +11,8 @@ export function useLibrary() {
   const platformsWithChoice = ref([])
   const platformCatalog = ref({ labels: {}, assignable: [] })
   const emulatorStatus = ref([])
+  const gamesPath = ref(null)
+  const ignoredPaths = ref([]) // éléments masqués, voir main/config.js: getIgnoredPaths
 
   // Versions d'émulateurs déjà lues (par chemin d'exe) : réappliquées immédiatement à
   // chaque rechargement de la bibliothèque (après chaque réglage modifié) pour ne pas
@@ -71,6 +73,8 @@ export function useLibrary() {
       configured.value = result.configured
       games.value = result.games
       installRoot.value = result.installRoot
+      gamesPath.value = result.gamesPath || null
+      ignoredPaths.value = result.ignoredPaths || []
       platformsWithChoice.value = result.platformsWithChoice || []
       emulatorStatus.value = withVersions(result.emulatorStatus || [], knownVersions, false)
       platformCatalog.value = result.platformCatalog || { labels: {}, assignable: [] }
@@ -114,6 +118,8 @@ export function useLibrary() {
     platformsWithChoice,
     platformCatalog,
     emulatorStatus,
+    gamesPath,
+    ignoredPaths,
     loadLibrary,
     chooseFolder,
     patchGame
