@@ -2,7 +2,7 @@
 import { ref, computed, watch } from 'vue'
 import { formatRelative } from '../stats-utils'
 
-// Page "Stockage" : jeux dont le zip RomStation a été décompressé au lancement (voir
+// Section "Stockage" des Réglages : jeux dont le zip RomStation a été décompressé au lancement (voir
 // main/launcher.js), avec la place occupée par les fichiers extraits, et nettoyage
 // groupé. Le zip d'origine n'est JAMAIS supprimé : seuls les fichiers qu'un zip voisin
 // lisible contient sont effacés (voir main/extraction.js: analyzeExtraction), le jeu
@@ -148,12 +148,14 @@ function formatBytes(bytes) {
 </script>
 
 <template>
-  <div class="storage-page">
+  <div class="storage-section">
     <section class="summary">
       <div class="summary-tile main">
         <span class="summary-value">{{ formatBytes(totalBytes) }}</span>
         <span class="summary-label">
-          occupés par le contenu décompressé de {{ rows.length }} jeu{{ rows.length > 1 ? 'x' : '' }}
+          occupés par le contenu décompressé de {{ rows.length }} jeu{{
+            rows.length > 1 ? 'x' : ''
+          }}
         </span>
       </div>
       <p class="summary-note">
@@ -227,15 +229,21 @@ function formatBytes(bytes) {
             </button>
             <span class="row-meta">
               {{ platformCatalog.labels?.[row.game.platform] || row.game.platform || '—' }}
-              · joué {{ formatRelative(row.game.lastPlayed, now) }}
-              · zip {{ formatBytes(row.info.zipBytes) }}
+              · joué {{ formatRelative(row.game.lastPlayed, now) }} · zip
+              {{ formatBytes(row.info.zipBytes) }}
             </span>
           </div>
-          <span v-if="row.info.unsafe" class="row-flag warn" title="Un zip du dossier est illisible : les fichiers extraits sont peut-être la seule copie valide, ils ne seront pas supprimés.">
+          <span
+            v-if="row.info.unsafe"
+            class="row-flag warn"
+            title="Un zip du dossier est illisible : les fichiers extraits sont peut-être la seule copie valide, ils ne seront pas supprimés."
+          >
             Zip illisible
           </span>
           <span v-else-if="row.info.busy || row.game.playingSince" class="row-flag">En jeu</span>
-          <span class="row-size">{{ row.info.unsafe ? '—' : formatBytes(row.info.extractedBytes) }}</span>
+          <span class="row-size">{{
+            row.info.unsafe ? '—' : formatBytes(row.info.extractedBytes)
+          }}</span>
         </li>
       </ul>
 
@@ -261,8 +269,7 @@ function formatBytes(bytes) {
 </template>
 
 <style scoped>
-.storage-page {
-  padding: 24px 28px 40px;
+.storage-section {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -441,7 +448,7 @@ function formatBytes(bytes) {
   justify-content: flex-end;
   gap: 16px;
   padding: 12px 0;
-  background: linear-gradient(transparent, var(--color-background) 30%);
+  background: linear-gradient(transparent, var(--bg) 30%);
 }
 .selection-info {
   font-size: 0.85rem;

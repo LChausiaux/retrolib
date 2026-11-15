@@ -1,6 +1,6 @@
 {
   "name": "retrolib",
-  "version": "2.4.2",
+  "version": "2.5.0",
   "description": "Bibliothèque de jeux et lanceur d’émulateurs pour une installation RomStation",
   "main": "./out/main/index.js",
   "author": "RetroLib",

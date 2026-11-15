@@ -3,11 +3,10 @@ import { ref, computed, watch, onMounted, onUnmounted } from 'vue'
 import GameLibrary from './components/GameLibrary.vue'
 import GamePage from './components/GamePage.vue'
 import EmulatorsPage from './components/EmulatorsPage.vue'
-import SettingsPanel from './components/SettingsPanel.vue'
+import SettingsPage from './components/SettingsPage.vue'
 import DiscSelectModal from './components/DiscSelectModal.vue'
 import CoverPickerModal from './components/CoverPickerModal.vue'
 import StatsPage from './components/StatsPage.vue'
-import StoragePage from './components/StoragePage.vue'
 import AppSidebar from './components/AppSidebar.vue'
 import AppIcon from './components/AppIcon.vue'
 import { installNavigation, navState, focusWhenNavigating } from './navigation'
@@ -59,13 +58,13 @@ const {
   refreshDetails
 } = useGameMetadata(games)
 
-const sidebarMode = ref('games') // 'games' | 'emulators' | 'stats' | 'storage' — même système de sidebar.
+const sidebarMode = ref('games') // 'games' | 'emulators' | 'stats' | 'settings' — même système de sidebar.
 const statsPeriod = ref('all') // 'all' | 'year' | 'month' | 'week' — filtre de la page Stats
 const search = ref('')
 const platformFilter = ref('')
 const genreFilter = ref('')
 const emulatorPlatformFilter = ref('')
-const showSettings = ref(false)
+const settingsSection = ref('library') // section des Réglages, voir settings-sections.js
 const selectedGameId = ref(null)
 
 // Recalculé à chaque rechargement de la bibliothèque : si le jeu affiché a été
@@ -193,7 +192,7 @@ const headerCount = computed(() => {
 const headerTitle = computed(() => {
   if (sidebarMode.value === 'emulators') return currentEmulatorLabel.value
   if (sidebarMode.value === 'stats') return 'Mes stats'
-  if (sidebarMode.value === 'storage') return 'Stockage'
+  if (sidebarMode.value === 'settings') return 'Réglages'
   return currentPlatformLabel.value
 })
 
@@ -274,7 +273,7 @@ function openGame(game) {
   focusWhenNavigating(null)
 }
 
-// Page Stats / Stockage : un clic sur un jeu ouvre sa fiche dans la bibliothèque.
+// Page Stats / Réglages (stockage) : un clic sur un jeu ouvre sa fiche dans la bibliothèque.
 function openGameFromStats(gameId) {
   if (!games.value.some((game) => game.id === gameId)) return
   sidebarMode.value = 'games'
@@ -432,6 +431,7 @@ onUnmounted(() => {
     <AppSidebar
       v-if="configured && !loading"
       v-model:stats-period="statsPeriod"
+      v-model:settings-section="settingsSection"
       :mode="sidebarMode"
       :games="enrichedGames"
       :platform-filter="platformFilter"
@@ -442,7 +442,6 @@ onUnmounted(() => {
       @select-platform="selectPlatform"
       @select-mode="selectMode"
       @select-emulator-platform="emulatorPlatformFilter = $event"
-      @open-settings="showSettings = true"
     />
 
     <div class="main-column">
@@ -578,14 +577,20 @@ onUnmounted(() => {
           @open-game="openGameFromStats"
         />
 
-        <StoragePage
-          v-else-if="sidebarMode === 'storage'"
+        <SettingsPage
+          v-else-if="sidebarMode === 'settings'"
+          :section="settingsSection"
+          :install-root="installRoot"
+          :ambiguous-games="ambiguousGames"
+          :platform-catalog="platformCatalog"
           :games="enrichedGames"
           :now="now"
-          :platform-catalog="platformCatalog"
-          @cleaned="loadLibrary()"
+          @library-changed="loadLibrary()"
+          @storage-cleaned="loadLibrary()"
           @error="handleStorageError"
           @open-game="openGameFromStats"
+          @choose-folder="chooseFolder"
+          @assign-platform="handleAssignPlatform"
         />
 
         <GamePage
@@ -646,18 +651,6 @@ onUnmounted(() => {
         <span><kbd>LT</kbd><kbd>RT</kbd> Section</span>
       </div>
     </div>
-
-    <SettingsPanel
-      v-if="showSettings"
-      :install-root="installRoot"
-      :ambiguous-games="ambiguousGames"
-      :platform-catalog="platformCatalog"
-      :games="games"
-      @library-changed="loadLibrary()"
-      @close="showSettings = false"
-      @choose-folder="chooseFolder"
-      @assign-platform="handleAssignPlatform"
-    />
 
     <div v-if="toast" class="toast" role="status">{{ toast }}</div>
 

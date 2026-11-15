@@ -3,19 +3,21 @@ import { computed } from 'vue'
 import PlatformIcon from './PlatformIcon.vue'
 import AppIcon from './AppIcon.vue'
 import { orderByFamily } from '../platform-families'
+import { SETTINGS_SECTIONS } from '../settings-sections'
 
 // Barre latérale : filtres de la bibliothèque (plateformes rangées par constructeur,
-// favoris, récents), période de la page Stats, plateformes de la page Émulateurs, et
-// en pied les sections de l'appli.
+// favoris, récents), période de la page Stats, plateformes de la page Émulateurs,
+// sections des Réglages, et en pied les sections de l'appli.
 const props = defineProps({
-  mode: { type: String, required: true }, // 'games' | 'emulators' | 'stats' | 'storage'
+  mode: { type: String, required: true }, // 'games' | 'emulators' | 'stats' | 'settings'
   games: { type: Array, required: true },
   platformFilter: { type: String, default: '' },
   platformCatalog: { type: Object, required: true },
   statsPeriod: { type: String, default: 'all' },
   statsPeriods: { type: Array, required: true },
   emulatorStatus: { type: Array, default: () => [] },
-  emulatorPlatformFilter: { type: String, default: '' }
+  emulatorPlatformFilter: { type: String, default: '' },
+  settingsSection: { type: String, default: 'library' }
 })
 
 const emit = defineEmits([
@@ -23,7 +25,7 @@ const emit = defineEmits([
   'select-mode',
   'update:statsPeriod',
   'select-emulator-platform',
-  'open-settings'
+  'update:settingsSection'
 ])
 
 const BRANDS = [
@@ -98,7 +100,7 @@ const FOOTER = [
   { mode: 'games', icon: 'library', label: 'Bibliothèque' },
   { mode: 'emulators', icon: 'gamepad', label: 'Émulateurs' },
   { mode: 'stats', icon: 'stats', label: 'Statistiques' },
-  { mode: 'storage', icon: 'storage', label: 'Stockage' }
+  { mode: 'settings', icon: 'settings', label: 'Réglages' }
 ]
 </script>
 
@@ -225,6 +227,27 @@ const FOOTER = [
           ></span>
         </button>
       </div>
+
+      <div v-else-if="mode === 'settings'" class="nav-group">
+        <div class="nav-heading">Réglages</div>
+        <button
+          v-for="section in SETTINGS_SECTIONS"
+          :key="section.value"
+          type="button"
+          data-nav-tab
+          class="nav-item"
+          :class="{ active: settingsSection === section.value }"
+          @click="emit('update:settingsSection', section.value)"
+        >
+          <span class="nav-label-wrap">
+            <AppIcon :name="section.icon" :size="16" />
+            <span class="nav-label">{{ section.label }}</span>
+          </span>
+          <span v-if="section.value === 'library' && unknownCount" class="nav-count warn">
+            {{ unknownCount }}
+          </span>
+        </button>
+      </div>
     </div>
 
     <div class="nav-footer">
@@ -238,9 +261,6 @@ const FOOTER = [
         @click="emit('select-mode', item.mode)"
       >
         <span class="nav-label-wrap"><AppIcon :name="item.icon" />{{ item.label }}</span>
-      </button>
-      <button type="button" class="nav-item footer-item" @click="emit('open-settings')">
-        <span class="nav-label-wrap"><AppIcon name="settings" />Réglages</span>
       </button>
     </div>
   </nav>
@@ -342,6 +362,9 @@ const FOOTER = [
   color: var(--text-3);
   font-variant-numeric: tabular-nums;
   font-weight: 400;
+}
+.nav-count.warn {
+  color: var(--warning);
 }
 .status-dot {
   width: 6px;
